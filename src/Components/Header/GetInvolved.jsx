@@ -23,12 +23,6 @@ const useStyles = makeStyles((theme) => ({
 		alignItems: 'center',
 		padding: ' 90px 32px ',
 	},
-	title: {
-		position: 'absolute',
-		top: '50%',
-		left: '50%',
-		transform: 'translate(-50%, -50%)',
-	},
 }));
 
 const gridItems = [
@@ -55,7 +49,7 @@ const gridItems = [
 function GetInvolved() {
 	const classes = useStyles();
 	const theme = useTheme();
-	const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+	const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
 	useEffect(() => {}, []);
 	return (
@@ -72,10 +66,15 @@ function GetInvolved() {
 				<Grid
 					item
 					xs={12}
-					sm={6}
-					md={4}
+					sm={12}
+					md={12}
 					lg={4}>
-					<Box sx={{}}>
+					<Box
+						sx={{
+							width: isMobile ? '90vw' : 'initial',
+							margin: isMobile ? 'auto' : 'initial',
+							textAlign: isMobile ? 'center' : '',
+						}}>
 						<Typography
 							variant='h4'
 							sx={{ mb: 4 }}>
@@ -94,13 +93,15 @@ function GetInvolved() {
 					item
 					xs={12}
 					sm={12}
-					md={8}
+					md={12}
 					lg={8}>
 					<Grid
 						container
-						spacing={6}>
+						spacing={6}
+						sx={{ width: isMobile ? '70vw' : '', margin: isMobile ? 'auto' : '' }}>
 						{gridItems.map((item) => (
 							<Grid
+								key={item.title}
 								item
 								xs={12}
 								sm={12}
@@ -124,7 +125,12 @@ function GetInvolved() {
 									{item.text}
 								</Typography>
 								<Button
-									endIcon={<AddIcon fontSize='large' color='secondary.light'/>}
+									endIcon={
+										<AddIcon
+											fontSize='large'
+											color='secondary.light'
+										/>
+									}
 									sx={{ my: 2, color: (theme) => theme.palette.primary.light }}>
 									{item.buttontext}
 								</Button>
