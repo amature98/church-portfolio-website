@@ -6,10 +6,12 @@ import {
 	useMediaQuery,
 	useTheme,
 	Button,
+	Icon,
 } from '@mui/material';
 import ChurchOutlinedIcon from '@mui/icons-material/ChurchOutlined';
 import HouseOutlinedIcon from '@mui/icons-material/HouseOutlined';
 import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
+import AddIcon from '@mui/icons-material/Add';
 import { makeStyles } from '@mui/styles';
 import gsap from 'gsap';
 
@@ -104,13 +106,13 @@ function GetInvolved() {
 								sm={12}
 								md={6}
 								lg={6}>
-								{item.icon}
-								{/* <ChurchOutlinedIcon
+								<Icon
+									fontSize='large'
 									sx={{
-										fontSize: '40px',
 										color: (theme) => theme.palette.secondary.light,
-									}}
-								/> */}
+									}}>
+									{item.icon}
+								</Icon>
 								<Typography
 									variant='h4'
 									sx={{ py: 2 }}>
@@ -121,7 +123,9 @@ function GetInvolved() {
 									sx={{ py: 2 }}>
 									{item.text}
 								</Typography>
-								<Button sx={{ my: 2, color: (theme) => theme.palette.primary.light }}>
+								<Button
+									endIcon={<AddIcon fontSize='large' color='secondary.light'/>}
+									sx={{ my: 2, color: (theme) => theme.palette.primary.light }}>
 									{item.buttontext}
 								</Button>
 							</Grid>

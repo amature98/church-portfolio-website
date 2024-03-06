@@ -83,7 +83,11 @@ function AboutSection({ title, aboutText, button, ...props }) {
 						component={Link}
 						to='/About'
 						endIcon={<ArrowForwardIcon fontSize='large' />}
-						sx={{ mt: 4, mb: 4 }}>
+						sx={{
+							mt: 4,
+							mb: 4,
+							background: (theme) => theme.palette.secondary.light,
+						}}>
 						KNOW MORE
 					</Button>
 				</Container>
