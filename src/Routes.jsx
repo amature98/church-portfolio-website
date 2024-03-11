@@ -1,12 +1,12 @@
 import React from 'react';
 import { Navigate, useRoutes } from 'react-router-dom';
 import Home from './Pages/Home';
-import About from './Pages/About'
+import About from './Pages/About';
 
 function Routes() {
 	return useRoutes([
 		{ path: '/', element: <Home /> },
-		{path: '/about', element: <About />},
+		{ path: '/about', element: <About /> },
 		// {path: '/groups', element: <Groups />},
 		// {path: '/announcements', element: <Announcements />},
 		// {path: '/projects', element: <Projects />},

@@ -13,7 +13,8 @@ function Home() {
 				<Header
 					title='Mukinyi Parish'
 					headerText='Inspiring people to follow Jesus Christ in faith, love and hope.'
-					bgImage={HeaderBgimg}
+					height='100vh'
+					bgimage={HeaderBgimg}
 				/>
 				<AboutSection
 					title='Welcome to Mukinyi Parish'

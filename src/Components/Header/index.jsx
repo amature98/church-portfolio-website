@@ -1,32 +1,33 @@
 import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+import { gsap, CSSPlugin } from 'gsap';
 import { Box, Container, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-const Header = styled(Box)(({ theme, ...props }) => ({
+gsap.registerPlugin(CSSPlugin);
+
+const StyledHeader = styled(Box)(({ height }) => ({
 	position: 'relative',
-	height: props.height || '100vh',
+	height: height || '100vh',
 	display: 'flex',
 	alignItems: 'center',
 }));
-const BackgroundImage = styled('div')(({ theme, ...props }) => ({
+const BackgroundImage = styled('div')(({ bgimage }) => ({
 	position: 'absolute',
 	top: 0,
 	left: 0,
 	width: '100%',
 	height: '100%',
-	background: props.bgImage
-		? `url(${props.bgImage})`
-		: 'none',
+	background: bgimage ? `url(${bgimage})` : 'none',
 	backgroundSize: 'cover',
 	backgroundPosition: 'center center',
 	zIndex: -1,
 }));
 
-function Index({ title, headerText, ...props }) {
+function Header({ title, headerText, height, bgimage, textAlign = 'start' }) {
 	const bgRef = useRef(null);
 	const titleRef = useRef(null);
 	const headerTextRef = useRef(null);
+
 	useEffect(() => {
 		gsap.fromTo(
 			bgRef.current,
@@ -43,31 +44,30 @@ function Index({ title, headerText, ...props }) {
 	}, []);
 	return (
 		<>
-			<Header {...props}>
+			<StyledHeader height={height}>
 				<BackgroundImage
-					{...props}
+					bgimage={bgimage}
 					ref={bgRef}
 				/>
-				<Container maxWidth='xl'>
+				<Container
+					maxWidth='xl'
+					sx={{ textAlign: textAlign }}>
 					<Typography
 						variant='h1'
 						component='div'
 						ref={titleRef}>
-						{title.split('\n').map((line, i) => (
-							<div key={i}> {line} </div>
-						))}
+						{title && title.split('\n').map((line) => <div key={line}> {line} </div>)}
 					</Typography>
 					<Typography
 						variant='h5'
 						component='div'
 						ref={headerTextRef}>
-						{headerText.split('\n').map((line, i) => (
-							<div key={i}> {line} </div>
-						))}
+						{headerText &&
+							headerText.split('\n').map((line, i) => <div key={i}> {line} </div>)}
 					</Typography>
 				</Container>
-			</Header>
+			</StyledHeader>
 		</>
 	);
 }
-export default Index;
+export default Header;

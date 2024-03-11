@@ -81,7 +81,7 @@ function AboutSection({ title, aboutText, button, ...props }) {
 						variant='contained'
 						size='large'
 						component={Link}
-						to='/About'
+						to='/about'
 						endIcon={<ArrowForwardIcon fontSize='large' />}
 						sx={{
 							mt: 4,
