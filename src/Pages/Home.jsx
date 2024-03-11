@@ -9,7 +9,7 @@ import GetInvolved from '../Components/Header/GetInvolved';
 function Home() {
 	return (
 		<>
-			<Page title='Home'>
+			<Page title='Home - PCEA MUKINYI PARISH'>
 				<Header
 					title='Mukinyi Parish'
 					headerText='Inspiring people to follow Jesus Christ in faith, love and hope.'
