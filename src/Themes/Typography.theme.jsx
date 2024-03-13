@@ -83,6 +83,8 @@ const typography = {
 		lineHeight: 1.0,
 		textTransform: 'capitalize',
 		letterSpacing: 1,
+		fontSize: responsiveFontSize(3.5),
+		...responsiveFontSizes({ sm: 2.75, md: 3, lg: 1.75 }),
 	},
 	body1: {
 		fontFamily: PRIMARY_FONT,
@@ -96,7 +98,7 @@ const typography = {
 		fontFamily: PRIMARY_FONT,
 		fontWeight: fontWeightLight,
 		lineHeight: 1.0,
-		fontSize: responsiveFontSize(2.5),
+		fontSize: responsiveFontSize(3.2),
 		...responsiveFontSizes({ sm: 3.0, md: 2.5, lg: 1.5 }),
 	},
 	button: {
