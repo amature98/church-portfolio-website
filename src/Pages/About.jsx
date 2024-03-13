@@ -19,7 +19,7 @@ function About() {
 				/>
 				<Container
 					maxWidth='none'
-					sx={{ width: '95vw', mx: 'auto', my: 4 }}>
+					sx={{ width: '95vw', mx: 'auto', my: 6 }}>
 					<Text />
 					<Leadership />
 				</Container>

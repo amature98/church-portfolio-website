@@ -67,17 +67,18 @@ function Leadership() {
 					container
 					justifyContent='center'
 					alignItems='center'
-					spacing={2}>
+					spacing={4} sx={{my:4}}>
 					{Leaders.map((leader, index) => (
 						<Grid
 							item
 							xs={6}
 							md={4}
-							lg={2}
-							key={index}>
+							lg={3}
+							key={index}
+						>
 							<Card
-								elevation={12}
-								sx={{ borderRadius: 3, maxWidth: 360 }}>
+								elevation={6}
+								sx={{ borderRadius: 3, width: '100%' }}>
 								<CardMedia
 									sx={{ height: '30vh' }}
 									component='img'
