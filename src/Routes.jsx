@@ -6,12 +6,13 @@ import Mukinyi from './Pages/Mukinyi';
 import Neema from './Pages/Neema';
 import BHC from './Pages/BHC';
 import Highway from './Pages/Highway';
+import District from './Pages/District'
 
 function Routes() {
 	return useRoutes([
 		{ path: '/', element: <Home /> },
 		{ path: '/about', element: <About /> },
-		// {path: '/groups', element: <Groups />},
+		{path: '/districts', element: <District />},
 		// {path: '/announcements', element: <Announcements />},
 		// {path: '/projects', element: <Projects />},
 		// {path: '/resources', element: <Resources /> },

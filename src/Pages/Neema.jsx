@@ -5,6 +5,12 @@ import BgImage from '../Images/church2.jpg';
 import Template from '../Components/About/Template';
 import Image from '../Images/elder1.jpg';
 
+const serviceArray = [
+	{ time: '8:30am - 10:30am', title: 'English Service' },
+	{ time: '10:40am - 1:00pm', title: 'Kiswahili Service' },
+	{ time: '8:30am - 10:00am', title: 'Church School' },
+];
+
 function Neema() {
 	return (
 		<>
@@ -21,6 +27,7 @@ function Neema() {
 					text='"At the heart of P.C.E.A Neema Church lies a steadfast conviction: that the call of the great commission is our sacred responsibility as followers of Jesus Christ. Here, we foster an environment where every member can authentically manifest the unique gifts bestowed upon them by God. Together, we inspire and support one another in our pursuit of spiritual growth and closeness to Jesus Christ. Moreover, it is our collective mission to extend His love and grace to those who are searching and in need of solace."'
 					cardHeader='Elder Samuel Macharia'
 					cardTitle='Neema LCC Chairperson'
+					serviceArray={serviceArray}
 				/>
 			</Page>
 		</>

@@ -4,13 +4,36 @@ import Page from '../Pages/Page';
 import Header from '../Components/Header';
 import BgImage from '../Images/church1.jpg';
 import Image from '../Images/elder2.jpg';
+import Leadership from '../Components/About/Leadership';
+
+// Import images
+import Image1 from '../Images/elder1.jpg'
+import Image2 from '../Images/elder2.jpg'
+import Image3 from '../Images/elder3.jpg'
 
 const serviceData = [
 	{ time: '8:30am - 10:30am', title: 'English Service' },
 	{ time: '10:40am - 1:00pm', title: 'Kiswahili Service' },
 	{ time: '10:30am - 12:30pm', title: 'Youth Service' },
+	{ time: '8:30am - 10:00am', title: 'Church School' },
 ];
-
+const Leaders = [
+	{
+		name: 'Elder Paul Thairu',
+		title: 'Chairperson',
+		image: Image1,
+	},
+	{
+		name: 'Elder Eustace Kiarie',
+		title: 'Registrar',
+		image: Image2,
+	},
+	{
+		name: 'Mrs. ',
+		title: 'Treasurer',
+		image: Image3,
+	},
+];
 function Mukinyi() {
 	return (
 		<Page title='Mukinyi Church - PCEA MUKINYI PARISH'>
@@ -27,6 +50,11 @@ function Mukinyi() {
 				cardHeader='Elder Paul Thairu'
 				cardTitle='Mukinyi LCC Chairperson'
 				serviceArray={serviceData}
+			/>
+			<Leadership
+				title='Mukinyi LCC Leadership'
+				leadersArray={Leaders}
+				textAlign='center'
 			/>
 		</Page>
 	);

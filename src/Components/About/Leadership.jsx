@@ -6,76 +6,33 @@ import {
 	Grid,
 	Typography,
 } from '@mui/material';
-import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import React from 'react';
-import Image1 from '../../Images/rev.jpg'
-import Image2 from '../../Images/elder1.jpg'
-import Image3 from '../../Images/elder2.jpg'
-import Image4 from '../../Images/elder3.jpg'
 
-const Leaders = [
-	{
-		name: 'Rev. Emmanuel Nkoitiko',
-		title: 'Session Moderator',
-		image: Image1,
-	},
-	{
-		name: 'Elder Caroline Gichuki',
-		title: 'Session Clerk',
-		image: Image2,
-	},
-	{
-		name: 'Elder David Muiruri',
-		title: 'Session Co-Clerk',
-		image: Image3,
-	},
-	{
-		name: 'Elder Grace Benson',
-		title: 'Finance Chair',
-		image: Image4,
-	},
-	{
-		name: 'Elder Simon Kigotho',
-		title: 'Parish Treasurer',
-		image: Image2,
-	},
-	{
-		name: 'Elder John Kihumba',
-		image: Image3,
-	},
-	{
-		name: 'Elder Zachariah Kori',
-		image: Image2,
-	},
-	{
-		name: 'Elder David Mwangi',
-		image: Image3,
-	},
-];
-
-function Leadership() {
+function Leadership({ title, leadersArray, textAlign='start' }) {
 	return (
 		<>
 			<Box sx={{ p: 4 }}>
 				<Typography
 					gutterBottom
 					variant='h3'
-					color='text.primary'>
-					Kirk Session - the Mukinyi Leadership
+					color='text.primary'
+					sx={{textAlign: textAlign}}
+				>
+					{title}
 				</Typography>
 				<Grid
 					container
 					justifyContent='center'
 					alignItems='center'
-					spacing={4} sx={{my:4}}>
-					{Leaders.map((leader, index) => (
+					spacing={4}
+					sx={{ my: 4 }}>
+					{leadersArray.map((leader, index) => (
 						<Grid
 							item
 							xs={6}
 							md={4}
 							lg={3}
-							key={index}
-						>
+							key={index}>
 							<Card
 								elevation={6}
 								sx={{ borderRadius: 3, width: '100%' }}>
@@ -89,8 +46,7 @@ function Leadership() {
 									<Typography
 										variant='h6'
 										gutterBottom>
-										{' '}
-										{leader.name}{' '}
+										{leader.name}
 									</Typography>
 									<Typography
 										variant='body2'
