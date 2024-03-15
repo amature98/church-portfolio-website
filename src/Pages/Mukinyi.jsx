@@ -3,7 +3,13 @@ import Template from '../Components/About/Template';
 import Page from '../Pages/Page';
 import Header from '../Components/Header';
 import BgImage from '../Images/church1.jpg';
-import Image from '../Images/elder2.jpg'
+import Image from '../Images/elder2.jpg';
+
+const serviceData = [
+	{ time: '8:30am - 10:30am', title: 'English Service' },
+	{ time: '10:40am - 1:00pm', title: 'Kiswahili Service' },
+	{ time: '10:30am - 12:30pm', title: 'Youth Service' },
+];
 
 function Mukinyi() {
 	return (
@@ -16,10 +22,11 @@ function Mukinyi() {
 			/>
 			<Template
 				churchName='Mukinyi Church'
-                text='"At P.C.E.A Mukinyi Church, we believe that the great commission is our mandate as the church of Jesus Christ and we ensure that we create a platform that allows members to express the different graces that have been apportioned to them by God. We encourage each other into growing towards Jesus Christ and make it our business to go out and show Him to the lost and lonely."'
-                image={Image}
-                cardHeader='Elder Paul Thairu'
-                cardTitle='LCC Chairperson'
+				text='"At P.C.E.A Mukinyi Church, we believe that the great commission is our mandate as the church of Jesus Christ and we ensure that we create a platform that allows members to express the different graces that have been apportioned to them by God. We encourage each other into growing towards Jesus Christ and make it our business to go out and show Him to the lost and lonely."'
+				image={Image}
+				cardHeader='Elder Paul Thairu'
+				cardTitle='Mukinyi LCC Chairperson'
+				serviceArray={serviceData}
 			/>
 		</Page>
 	);

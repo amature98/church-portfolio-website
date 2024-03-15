@@ -1,10 +1,15 @@
 import React from 'react';
 import {
 	Box,
+	Button,
+	ButtonGroup,
 	Card,
 	CardContent,
 	CardMedia,
+	Divider,
 	Grid,
+	Paper,
+	Stack,
 	Typography,
 } from '@mui/material';
 
@@ -14,6 +19,7 @@ function Template({
 	image = '',
 	cardHeader = '',
 	cardTitle = '',
+	serviceArray,
 }) {
 	return (
 		<>
@@ -33,14 +39,39 @@ function Template({
 							color='text.primary'>
 							Welcome to {churchName}
 						</Typography>
-						<Typography variant='body2'>{text}</Typography>
+						<Typography
+							gutterBottom
+							variant='body2'>
+							{text}
+						</Typography>
+						<Stack
+							direction='row'
+							spacing={4}
+							sx={{ mt: 4 }}>
+							<Button
+								sx={{
+									background: (theme) => theme.palette.secondary.light,
+								}}>
+								{' '}
+								join our congregation
+							</Button>
+							<Button
+								sx={{
+									background: (theme) => theme.palette.secondary.light,
+								}}>
+								{' '}
+								contribute
+							</Button>
+						</Stack>
 					</Grid>
 					<Grid
 						item
 						xs={12}
 						md={6}
 						lg={6}>
-						<Card sx={{ flexGrow: 1, zIndex: 1, borderRadius: 3 }}>
+						<Card
+							variant='outlined'
+							sx={{ flexGrow: 1, zIndex: 1, borderRadius: 3 }}>
 							<CardMedia
 								component='img'
 								image={image}
@@ -72,6 +103,39 @@ function Template({
 					gutterBottom>
 					Sunday Service Program
 				</Typography>
+				<Stack
+					direction='row'
+					divider={
+						<Divider
+							orientation='vertical'
+							flexItem
+							variant='middle'
+							sx={{ opacity: 0.95, color: 'text,light'}}
+						/>
+					}>
+					{serviceArray.map((item, index) => (
+						<Paper
+							sx={{
+								textAlign: 'center',
+								px: 2,
+								py: 2,
+								backgroundColor: (theme) => theme.palette.primary.main,
+							}}
+							key={index}
+							elevation={0}>
+							<Typography
+								variant='h6'
+								color='text.light'>
+								{item.title}
+							</Typography>
+							<Typography
+								color='text.light'
+								variant='body2'>
+								{item.time}
+							</Typography>
+						</Paper>
+					))}
+				</Stack>
 			</Box>
 		</>
 	);

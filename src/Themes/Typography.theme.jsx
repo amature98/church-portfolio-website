@@ -105,8 +105,8 @@ const typography = {
 		fontFamily: SECONDARY_FONT,
 		fontWeight: fontWeightBold,
 		textTransform: 'capitalize',
-		fontSize: responsiveFontSize(2),
-		...responsiveFontSizes({ sm: 2.0, md: 1.75, lg: 1.4 }),
+		fontSize: responsiveFontSize(3.5),
+		...responsiveFontSizes({ sm: 2.0, md: 1.75, lg: 1.5 }),
 	},
 	quote: {
 		fontFamily: PRIMARY_FONT,
