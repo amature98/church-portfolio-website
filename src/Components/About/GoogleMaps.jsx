@@ -25,7 +25,7 @@ function GoogleMaps() {
 					elevation={2}
 					sx={{ height: '75vh', width: '90vw', mx: 'auto' }}>
 					<iframe
-						src='https://www.google.com/maps/d/embed?mid=1iHvGgTj1WTg-P9lzgC6mJQ-IVq3MHYY&ehbc=2E312F&noprof=1'
+						src="https://www.google.com/maps/d/embed?mid=1iHvGgTj1WTg-P9lzgC6mJQ-IVq3MHYY&ehbc=2E312F&noprof=1"
 						title='Google Maps'
 						width='100%'
 						height='100%'

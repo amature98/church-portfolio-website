@@ -64,7 +64,7 @@ function DistrictTable({ DistrictArray }) {
 						color='text.primary'>
 						Our district fellowships take place every week on Thursday from 7pm to 8pm
 						usually at one of the members residence.These are our districts and their
-						meeting times.
+						patrons.
 					</Typography>
 				</Box>
 
