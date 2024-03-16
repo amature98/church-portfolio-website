@@ -92,7 +92,7 @@ const typography = {
 		lineHeight: 1.5,
 		letterSpacing: 1,
 		fontSize: responsiveFontSize(4.5),
-		...responsiveFontSizes({ sm: 3.75, md: 2.75, lg: 2.25 }),
+		...responsiveFontSizes({ sm: 3.75, md: 2.75, lg: 2.0 }),
 	},
 	body2: {
 		fontFamily: PRIMARY_FONT,

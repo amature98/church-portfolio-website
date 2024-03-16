@@ -1,10 +1,16 @@
 // Import components
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../Components/Header/index';
 import Page from '../Pages/Page';
 
 // Import Image
 import BgImage from '../Images/districts.jpg';
+
+// Import components
+import GoogleMaps from '../Components/About/GoogleMaps';
+import DistrictTable from '../Components/About/DistrictTable';
+// Import District array
+import { DistrictArray } from '../Components/Arrays/Arrays';
 
 function District() {
 	return (
@@ -17,6 +23,8 @@ function District() {
 					height='75vh'
 					bgimage={BgImage}
 				/>
+				<DistrictTable DistrictArray={DistrictArray}/>
+				<GoogleMaps />
 			</Page>
 		</>
 	);
