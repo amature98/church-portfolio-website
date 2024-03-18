@@ -20,6 +20,7 @@ function SmallScreenNavbar(props) {
 				/>
 			</Box>
 			<IconButton
+				color='inherit'
 				size='large'
 				aria-label='open-drawer'
 				onClick={toggleDrawer}

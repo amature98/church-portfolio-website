@@ -24,7 +24,7 @@ const PRIMARY_FONT = 'Open Sans, sans-serif'; //For Body text
 const fontWeightThin = 200;
 const fontWeightLight = 300;
 const fontWeightRegular = 400;
-const fontWeightBold = 500;
+const fontWeightBold = 600;
 
 const typography = {
 	fontFamily: PRIMARY_FONT,
@@ -104,9 +104,9 @@ const typography = {
 	button: {
 		fontFamily: SECONDARY_FONT,
 		fontWeight: fontWeightBold,
-		textTransform: 'capitalize',
+		textTransform: 'uppercase',
 		fontSize: responsiveFontSize(3.5),
-		...responsiveFontSizes({ sm: 2.0, md: 1.75, lg: 1.5 }),
+		...responsiveFontSizes({ sm: 2.0, md: 1.75, lg: 1.4 }),
 	},
 	quote: {
 		fontFamily: PRIMARY_FONT,

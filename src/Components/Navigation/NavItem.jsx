@@ -13,10 +13,7 @@ import { Link } from 'react-router-dom';
 const StyledNavItem = styled(ListItemButton)(({ theme }) => ({
 	textAlign: 'center',
 	':hover': {
-		backgroundColor: alpha(
-			theme.palette.action.hover,
-			theme.palette.action.hoverOpacity,
-		),
+		backgroundColor: alpha(theme.palette.action.hover, 0.9),
 	},
 }));
 // Default function that renders the nav-items
@@ -29,8 +26,8 @@ function NavItem({ item }) {
 				to={path}>
 				<ListItemText>
 					<Typography
-						variant='body1'
-						sx={{ color: 'fff' }}>
+						variant='body2'
+						sx={{ color: '#f7f7f7' }}>
 						{title}
 					</Typography>
 				</ListItemText>

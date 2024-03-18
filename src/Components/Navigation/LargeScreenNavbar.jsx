@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import navLinks from './NavLinks';
+import { largeScreenLinks } from './NavLinks';
 import { Box, Button, IconButton, Link } from '@mui/material';
 import NavDrawer from './NavDrawer';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -29,16 +29,17 @@ function LargeScreenNavbar(props) {
 					/>
 				</Button>
 				<Box>
-					{navLinks.slice(0, 5).map((link) => (
+					{largeScreenLinks.map((link, index) => (
 						<Button
-							key={link.title}
+							key={index}
 							component={Link}
-							to={link.path}>
+							to={link.path}
+							sx={{ color: (theme) => theme.palette.primary.light }}>
 							{link.title}
 						</Button>
 					))}
 					<IconButton
-						color='default'
+						color='inherit'
 						size='large'
 						aria-label='togglebtn'
 						onClick={toggleDrawer}>

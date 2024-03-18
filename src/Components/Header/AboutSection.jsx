@@ -84,11 +84,10 @@ function AboutSection({ title, aboutText, button, ...props }) {
 						to='/about'
 						endIcon={<ArrowForwardIcon fontSize='large' />}
 						sx={{
-							mt: 4,
-							mb: 4,
+							m: 4,
 							background: (theme) => theme.palette.secondary.light,
 						}}>
-						KNOW MORE
+						know more
 					</Button>
 				</Container>
 			</Box>

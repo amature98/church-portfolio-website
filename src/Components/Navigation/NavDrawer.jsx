@@ -12,15 +12,7 @@ import {
 	Typography,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import navLinks from './NavLinks';
-const navTitles = [
-	{ title: 'About', index: 0 },
-	{ title: 'Churches', index: 1 },
-	{ title: 'Get Involved', index: 2 },
-	{ title: 'Groups', index: 3 },
-	{ title: 'Projects', index: 4 },
-	{ title: 'Resources', index: 5 },
-];
+import { navTitles, navLinks} from './NavLinks';
 
 function NavDrawer({
 	anchor = 'right',
@@ -37,7 +29,7 @@ function NavDrawer({
 					direction='row'
 					justifyContent='space-between'
 					alignItems='flex-start'
-					sx={{ borderBottom: '0.2px solid #ffffff', mb: '30px', pb: '10px' }}>
+					sx={{ borderBottom: '0.1px solid #f7f7f7', mb: '30px', pb: '10px' }}>
 					<Button href='/'>
 						<img
 							src=''
@@ -45,11 +37,10 @@ function NavDrawer({
 						/>
 					</Button>
 					<IconButton
-						color='secondary'
+						color='inherit'
 						aria-label='close'
-						size='large'
 						onClick={onClick}>
-						<CloseIcon />
+						<CloseIcon sx={{ fontSize: 32 }} />
 					</IconButton>
 				</Stack>
 				<Box sx={{ flexGrow: 1 }}>
@@ -61,7 +52,7 @@ function NavDrawer({
 								item
 								xs={4}
 								key={index}>
-								<Typography variant='h4'> {navTitle.title} </Typography>
+								<Typography variant='h6'> {navTitle.title} </Typography>
 								<List>
 									{navLinks.slice(index * 4, (index + 1) * 4).map((navLink, i) => (
 										<ListItemButton key={i}>

@@ -12,16 +12,17 @@ import { useTheme } from '@mui/material/styles';
 import PropTypes from 'prop-types';
 
 // Custom function to render elevation on scrolling the navbar with effect
-function ElevationScroll(props) {
-	const { children, window } = props;
+function ElevationScroll({ children, window }) {
 	const trigger = useScrollTrigger({
 		disableHysteresis: true,
 		threshold: 0,
 		target: window ? window() : undefined,
 	});
 	return cloneElement(children, {
-		elevation: trigger ? 4 : 0,
-		style: { backgroundColor: trigger ? '#333333' : 'transparent' },
+		elevation: trigger ? 12 : 0,
+		style: {
+			backgroundColor: trigger ? '#004c6d' : 'transparent',
+		},
 	});
 }
 ElevationScroll.propTypes = {
@@ -37,7 +38,7 @@ function Navbar(props) {
 	return (
 		<>
 			<ElevationScroll {...props}>
-				<AppBar color='transparent'>
+				<AppBar>
 					<Toolbar>
 						<Container maxWidth='false'>
 							{isSmallScreen ? <SmallScreenNavbar /> : <LargeScreenNavbar />}
