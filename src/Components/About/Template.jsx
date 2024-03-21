@@ -1,101 +1,39 @@
 import React from 'react';
-import {
-	Box,
-	Button,
-	ButtonGroup,
-	Card,
-	CardContent,
-	CardMedia,
-	Divider,
-	Grid,
-	Paper,
-	Stack,
-	Typography,
-} from '@mui/material';
+import { Box, Divider, Paper, Stack, Typography } from '@mui/material';
+import JoinChurchButton from '../Buttons/JoinChurch.button';
+import ContributeButton from '../Buttons/Contribute.button';
 
-function Template({
-	churchName = '',
-	text = '',
-	image = '',
-	cardHeader = '',
-	cardTitle = '',
-	serviceArray,
-}) {
+function Template({ churchName = '', text = '', serviceArray }) {
 	return (
 		<>
-			<Box sx={{ width: '80vw', mx: 'auto', my: 8 }}>
-				<Grid
-					container
-					sx={{ flexGrow: 1 }}
-					spacing={4}>
-					<Grid
-						item
-						xs={12}
-						md={6}
-						lg={6}>
-						<Typography
-							gutterBottom
-							variant='h3'
-							color='text.primary'>
-							Welcome to {churchName}
-						</Typography>
-						<Typography
-							gutterBottom
-							variant='body2'>
-							{text}
-						</Typography>
-						<Stack
-							direction='row'
-							spacing={4}
-							sx={{ mt: 4 }}>
-							<Button
-								sx={{
-									background: (theme) => theme.palette.secondary.light,
-								}}>
-								{' '}
-								join our congregation
-							</Button>
-							<Button
-								sx={{
-									background: (theme) => theme.palette.secondary.light,
-								}}>
-								{' '}
-								contribute
-							</Button>
-						</Stack>
-					</Grid>
-					<Grid
-						item
-						xs={12}
-						md={6}
-						lg={6}>
-						<Card
-							variant='outlined'
-							sx={{ borderRadius: 3 }}>
-							<CardMedia
-								component='img'
-								image={image}
-								alt='Image'
-								sx={{ height: '50vh' }}
-							/>
-							<CardContent>
-								<Typography
-									gutterBottom
-									variant='h3'
-									color='text.primary'
-									component='div'>
-									{cardHeader}
-								</Typography>
-								<Typography
-									gutterBottom
-									variant='body2'
-									component='div'>
-									{cardTitle}
-								</Typography>
-							</CardContent>
-						</Card>
-					</Grid>
-				</Grid>
+			<Box
+				sx={{
+					width: '80vw',
+					mx: 'auto',
+					my: 8,
+					display: 'flex',
+					flexDirection: 'column',
+					alignItems: 'center',
+					textAlign: 'center',
+				}}>
+				<Typography
+					gutterBottom
+					variant='h3'
+					color='text.primary'>
+					Welcome to {churchName}
+				</Typography>
+				<Typography
+					gutterBottom
+					variant='body2'>
+					{text}
+				</Typography>
+				<Stack
+					direction='row'
+					spacing={4}
+					sx={{ mt: 4 }}>
+					<JoinChurchButton />
+					<ContributeButton />
+				</Stack>
 			</Box>
 			<Box
 				sx={{
@@ -108,11 +46,12 @@ function Template({
 						alignItems: 'center',
 						justifyContent: 'center',
 						flexDirection: 'column',
-						p:4
+						p: 4,
 					}}>
 					<Typography
 						variant='h3'
-						gutterBottom>
+						gutterBottom
+						sx={{ textAlign: 'center' }}>
 						Sunday Service Program
 					</Typography>
 					<Stack
@@ -122,7 +61,7 @@ function Template({
 								orientation='vertical'
 								flexItem
 								variant='middle'
-								sx={{ opacity: 0.95, backgroundColor: 'text.light' }}
+								sx={{ backgroundColor: 'text.light' }}
 							/>
 						}>
 						{serviceArray.map((item, index) => (

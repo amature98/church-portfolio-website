@@ -11,11 +11,7 @@ import Image2 from '../Images/elder2.jpg';
 import Image3 from '../Images/elder3.jpg';
 import BgImage from '../Images/church3.jpg';
 
-const serviceData = [
-	{ time: '8:30am - 10:30am', title: 'English Service' },
-	{ time: '10:40am - 1:00pm', title: 'Kiswahili Service' },
-	{ time: '8:00am - 9:00am', title: 'Church School' },
-];
+import { bhcServiceArray } from '../Components/Arrays/Arrays';
 const Leaders = [
 	{
 		name: 'Elder joseph Mugweru',
@@ -48,7 +44,7 @@ function BHC() {
 				image={Image}
 				cardHeader='Elder Joseph Mugweru'
 				cardTitle='Mukinyi LCC Chairperson'
-				serviceArray={serviceData}
+				serviceArray={bhcServiceArray}
 			/>
 			<Leadership
 				title='BHC LCC Leadership'

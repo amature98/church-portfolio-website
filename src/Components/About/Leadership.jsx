@@ -8,16 +8,17 @@ import {
 } from '@mui/material';
 import React from 'react';
 
-function Leadership({ title, leadersArray, textAlign='start' }) {
+function Leadership({ title, leadersArray, textAlign = 'start' }) {
 	return (
 		<>
-			<Box sx={{ p: 4 }}>
+			<Box
+				id='Leadership'
+				sx={{ p: 4 }}>
 				<Typography
 					gutterBottom
 					variant='h3'
 					color='text.primary'
-					sx={{textAlign: textAlign}}
-				>
+					sx={{ textAlign: textAlign }}>
 					{title}
 				</Typography>
 				<Grid

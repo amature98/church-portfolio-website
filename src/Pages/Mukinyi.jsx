@@ -11,12 +11,8 @@ import Image1 from '../Images/elder1.jpg'
 import Image2 from '../Images/elder2.jpg'
 import Image3 from '../Images/elder3.jpg'
 
-const serviceData = [
-	{ time: '8:30am - 10:30am', title: 'English Service' },
-	{ time: '10:40am - 1:00pm', title: 'Kiswahili Service' },
-	{ time: '10:30am - 12:30pm', title: 'Youth Service' },
-	{ time: '8:30am - 10:00am', title: 'Church School' },
-];
+// Import Arrays 
+import { mukinyiServiceArray } from '../Components/Arrays/Arrays';
 const Leaders = [
 	{
 		name: 'Elder Paul Thairu',
@@ -49,7 +45,7 @@ function Mukinyi() {
 				image={Image}
 				cardHeader='Elder Paul Thairu'
 				cardTitle='Mukinyi LCC Chairperson'
-				serviceArray={serviceData}
+				serviceArray={mukinyiServiceArray}
 			/>
 			<Leadership
 				title='Mukinyi LCC Leadership'

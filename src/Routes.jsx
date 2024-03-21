@@ -6,22 +6,24 @@ import Mukinyi from './Pages/Mukinyi';
 import Neema from './Pages/Neema';
 import BHC from './Pages/BHC';
 import Highway from './Pages/Highway';
-import District from './Pages/District'
+import District from './Pages/District';
+import Ministry from './Pages/Ministry';
 
 function Routes() {
 	return useRoutes([
 		{ path: '/', element: <Home /> },
 		{ path: '/about', element: <About /> },
-		{path: '/districts', element: <District />},
-		// {path: '/announcements', element: <Announcements />},
+		{ path: '/districts', element: <District /> },
+		{ path: '/join-a-ministry', element: <Ministry /> },
+		// {path: '/events', element: <Announcements />},
 		// {path: '/projects', element: <Projects />},
 		// {path: '/resources', element: <Resources /> },
-		// {path: '/projects/school', element: <School /> },
-		// {path: '/projects/mukinyi-sacco', element: <Sacco />},
-		{path: '/mukinyi-church', element: <Mukinyi />},
-		{path: '/neema-church', element: <Neema />},
-		{path: '/blessed-hope-church', element: <BHC />},
-		{path: '/highway-church', element: <Highway />},
+		// {path: '/mpa', element: <School /> },
+		// {path: '/mukinyi-sacco', element: <Sacco />},
+		{ path: '/mukinyi-church', element: <Mukinyi /> },
+		{ path: '/neema-church', element: <Neema /> },
+		{ path: '/blessed-hope-church', element: <BHC /> },
+		{ path: '/highway-church', element: <Highway /> },
 		// {path: '/404', element: <ErrorPage /> },
 		// {path: '*', element: <Navigate to='/404' />},
 	]);

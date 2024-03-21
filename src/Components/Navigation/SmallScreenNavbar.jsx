@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
-import { Box, IconButton, List } from '@mui/material';
+import { IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import NavDrawer from './NavDrawer';
+import LogoNavLink from '../Buttons/LogoNavLink';
 
 function SmallScreenNavbar(props) {
+	const filterValues = [
+		'About',
+		'Congregations',
+		'Get Involved',
+		'Ministries',
+		'Programs',
+		'Resources',
+	];
 	const { window } = props;
 	const container =
 		window !== undefined ? () => window.document.body : undefined;
@@ -13,25 +22,21 @@ function SmallScreenNavbar(props) {
 	};
 	return (
 		<>
-			<Box>
-				<img
-					src=''
-					alt='Logo'
-				/>
-			</Box>
+			<LogoNavLink />
 			<IconButton
 				color='inherit'
-				size='large'
 				aria-label='open-drawer'
 				onClick={toggleDrawer}
 				sx={{ position: 'fixed', top: 15, right: 30 }}>
-				<MenuIcon />
+				<MenuIcon fontSize='large' />
 			</IconButton>
 			<NavDrawer
 				open={open}
 				onClose={toggleDrawer}
 				container={container}
-				onClick={toggleDrawer}></NavDrawer>
+				onClick={toggleDrawer}
+				filter={filterValues}
+			/>
 		</>
 	);
 }

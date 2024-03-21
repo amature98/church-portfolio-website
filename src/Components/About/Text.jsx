@@ -1,10 +1,13 @@
-import { Box, Card, Grid, Typography } from '@mui/material';
+import { Box, Card, Divider, Grid, Typography } from '@mui/material';
 import React from 'react';
+import { Beliefs } from '../Arrays/Arrays';
 
 function Text() {
 	return (
 		<>
-			<Box>
+			<Box
+				component='section'
+				id='beliefs'>
 				<Card
 					elevation={6}
 					sx={{
@@ -72,54 +75,27 @@ function Text() {
 					<Grid
 						container
 						spacing={6}>
-						<Grid
-							item
-							xs={4}>
-							<Typography
-								gutterBottom
-								variant='h6'>
-								Mission
-							</Typography>
-							<Typography
-								gutterBottom
-								variant='body2'>
-								{' '}
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-							</Typography>
-						</Grid>
-						<Grid
-							item
-							xs={4}>
-							<Typography
-								gutterBottom
-								variant='h6'>
-								Vision
-							</Typography>
-							<Typography
-								gutterBottom
-								variant='body2'>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							</Typography>
-						</Grid>
-						<Grid
-							item
-							xs={4}>
-							<Typography
-								gutterBottom
-								variant='h6'>
-								Motto
-							</Typography>
-							<Typography
-								gutterBottom
-								variant='body2'>
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-							</Typography>
-						</Grid>
+						{Beliefs.map((item) => (
+							<Grid
+								key={item.title}
+								item
+								xs={4}>
+								<Typography
+									gutterBottom
+									variant='h6'>
+									{item.title}
+								</Typography>
+								<Typography
+									gutterBottom
+									variant='body2'>
+									{item.text}
+								</Typography>
+							</Grid>
+						))}
 					</Grid>
 				</Card>
 			</Box>
 		</>
 	);
 }
-
 export default Text;

@@ -4,6 +4,7 @@ import LargeScreenNavbar from './LargeScreenNavbar.jsx';
 import {
 	AppBar,
 	Container,
+	CssBaseline,
 	Toolbar,
 	useMediaQuery,
 	useScrollTrigger,
@@ -37,9 +38,10 @@ function Navbar(props) {
 	const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
 	return (
 		<>
+			<CssBaseline />
 			<ElevationScroll {...props}>
-				<AppBar>
-					<Toolbar>
+				<AppBar sx={{pb: 1.5}}>
+					<Toolbar >
 						<Container maxWidth='false'>
 							{isSmallScreen ? <SmallScreenNavbar /> : <LargeScreenNavbar />}
 						</Container>

@@ -6,24 +6,36 @@ import {
 	ListItemButton,
 	ListItemText,
 	Typography,
+	useTheme,
 } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 // Function to create a custom styled nav item
 const StyledNavItem = styled(ListItemButton)(({ theme }) => ({
-	textAlign: 'center',
 	':hover': {
-		backgroundColor: alpha(theme.palette.action.hover, 0.9),
+		backgroundColor: alpha(theme.palette.secondary.light, 0.9),
 	},
 }));
+
 // Default function that renders the nav-items
-function NavItem({ item }) {
+function NavItem({ item, active }) {
 	const { title, path } = item;
+	const isActive = active(item.path);
+	const theme = useTheme();
+	const activeNavItemStyle = {
+		color: 'text.secondary',
+		backgroundColor: alpha(
+			theme.palette.secondary.light,
+			theme.palette.action.selectedOpacity,
+		),
+	};
 	return (
 		<ListItem>
 			<StyledNavItem
+				disableGutters
 				component={Link}
-				to={path}>
+				to={path}
+				sx={{ ...(isActive && activeNavItemStyle) }}>
 				<ListItemText>
 					<Typography
 						variant='body2'
@@ -36,7 +48,8 @@ function NavItem({ item }) {
 	);
 }
 NavItem.propTypes = {
-	item: PropTypes.object,
+	item: PropTypes.object.isRequired,
+	active: PropTypes.func,
 };
 
 export default NavItem;

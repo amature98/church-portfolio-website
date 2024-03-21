@@ -11,11 +11,8 @@ import Image3 from '../Images/elder3.jpg';
 import BgImage from '../Images/church4.jpg';
 import Image from '../Images/elder2.jpg';
 
-const serviceData = [
-	{ time: '8:30am - 10:30am', title: 'English Service' },
-	{ time: '10:40am - 1:00pm', title: 'Kiswahili Service' },
-	{ time: '8:30am - 10:00am', title: 'Church School' },
-];
+// Import Arrays
+import { highwayServiceArray } from '../Components/Arrays/Arrays';
 const Leaders = [
 	{
 		name: 'Elder Kanyi',
@@ -48,7 +45,7 @@ function Highway() {
 				image={Image}
 				cardHeader='Elder Kanyi'
 				cardTitle='Highway LCC Chairperson'
-				serviceArray={serviceData}
+				serviceArray={highwayServiceArray}
 			/>
 			<Leadership
 				title='Highway LCC Leadership'
