@@ -8,6 +8,7 @@ import BHC from './Pages/BHC';
 import Highway from './Pages/Highway';
 import District from './Pages/District';
 import Ministry from './Pages/Ministry';
+import Events from './Pages/Events';
 
 function Routes() {
 	return useRoutes([
@@ -15,9 +16,7 @@ function Routes() {
 		{ path: '/about', element: <About /> },
 		{ path: '/districts', element: <District /> },
 		{ path: '/join-a-ministry', element: <Ministry /> },
-		// {path: '/events', element: <Announcements />},
-		// {path: '/projects', element: <Projects />},
-		// {path: '/resources', element: <Resources /> },
+		{path: '/events', element: <Events />},
 		// {path: '/mpa', element: <School /> },
 		// {path: '/mukinyi-sacco', element: <Sacco />},
 		{ path: '/mukinyi-church', element: <Mukinyi /> },
