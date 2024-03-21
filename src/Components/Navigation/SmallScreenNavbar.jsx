@@ -35,7 +35,6 @@ function SmallScreenNavbar(props) {
 				onClose={toggleDrawer}
 				container={container}
 				onClick={toggleDrawer}
-				filter={filterValues}
 			/>
 		</>
 	);

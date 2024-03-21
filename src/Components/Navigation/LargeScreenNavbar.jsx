@@ -13,14 +13,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import LogoNavLink from '../Buttons/LogoNavLink';
 
 function LargeScreenNavbar({ window }) {
-	const filterValues = [
-		'About',
-		'Congregations',
-		'Get Involved',
-		'Ministries',
-		'Programs',
-		'Resources',
-	];
 	const container =
 		window !== undefined ? () => window.document.body : undefined;
 	const [open, setOpen] = useState(false);
@@ -57,7 +49,6 @@ function LargeScreenNavbar({ window }) {
 				onClose={toggleDrawer}
 				container={container}
 				onClick={toggleDrawer}
-				filter={filterValues}
 			/>
 		</Box>
 	);

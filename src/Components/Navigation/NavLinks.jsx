@@ -13,7 +13,6 @@ export const navLinks = [
 	},
 	{ title: 'Highway Church', path: '/highway-church', filter: 'Congregations' },
 	//Get Involved Section
-	{ title: 'Welcome to Mukinyi', path: '/', filter: 'Get Involved' },
 	{ title: 'Join A Ministry', path: '/join-a-Ministry', filter: 'Get Involved' },
 	{ title: 'Events', path: '/events', filter: 'Get Involved' },
 	{ title: 'Find Your District', path: '/districts', filter: 'Get Involved' },
