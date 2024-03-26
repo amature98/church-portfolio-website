@@ -1,6 +1,6 @@
 import React from 'react';
 import Page from './Page';
-import Header from '../Components/Header/index';
+import Header from '../Components/Header/Header';
 import HeaderBgimg from '../Images/home-bgimg.jpg';
 import AboutSection from '../Components/Header/AboutSection';
 import LocationsSections from '../Components/Header/Locations';
@@ -21,6 +21,7 @@ function Home() {
 					aboutText={
 						"Welcome to Mukinyi Parish, where faith meets community and hope sustains. We invite you to join us on a journey of spiritual growth and fellowship. Whether you're seeking solace, friendship, or a deeper connection with your faith, you'll find a warm embrace and open hearts here. Come as you are, and let's walk together in the light of God's love."
 					}
+					button='know more'
 				/>
 				<GetInvolved />
 				<LocationsSections

@@ -45,8 +45,7 @@ export const largeScreenLinks = [
 	{ title: 'About', path: '/About' },
 	{ title: 'Join A Ministry', path: '/join-a-ministry' },
 	{ title: 'Events', path: '/events' },
-	{ title: 'Resources', path: '/resources' },
-	{ title: 'Projects', path: '/projects' },
+	{ title: 'Articles', path: '/articles' },
 ];
 
 export const navTitles = [

@@ -9,6 +9,12 @@ import Highway from './Pages/Highway';
 import District from './Pages/District';
 import Ministry from './Pages/Ministry';
 import Events from './Pages/Events';
+import EventDetails from './Pages/EventDetails';
+import YouthPage from './Pages/Youth.page';
+import Sacco from './Pages/Sacco.page.jsx';
+import School from './Pages/School.page.jsx';
+import RopesPage from './Pages/Ropes.page.jsx';
+import ArticlesPage from './Pages/Articles.page.jsx';
 
 function Routes() {
 	return useRoutes([
@@ -16,13 +22,17 @@ function Routes() {
 		{ path: '/about', element: <About /> },
 		{ path: '/districts', element: <District /> },
 		{ path: '/join-a-ministry', element: <Ministry /> },
-		{path: '/events', element: <Events />},
-		// {path: '/mpa', element: <School /> },
-		// {path: '/mukinyi-sacco', element: <Sacco />},
+		{ path: '/events', element: <Events />},
+		{ path: '/events/:id', element: <EventDetails />},
+		{ path: '/youth-fellowship', element: <YouthPage />},
+		{path: '/mpa', element: <School /> },
+		{path: '/mukinyi-sacco', element: <Sacco />},
 		{ path: '/mukinyi-church', element: <Mukinyi /> },
 		{ path: '/neema-church', element: <Neema /> },
 		{ path: '/blessed-hope-church', element: <BHC /> },
 		{ path: '/highway-church', element: <Highway /> },
+		{ path: '/ropes', element: <RopesPage /> },
+		{ path: '/articles', element: <ArticlesPage/> },
 		// {path: '/404', element: <ErrorPage /> },
 		// {path: '*', element: <Navigate to='/404' />},
 	]);

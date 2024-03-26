@@ -1,7 +1,7 @@
 const PRIMARY = {
 	main: '#004c6d', //deep blue
 	dark: '#333333', //dark gray
-	light: '#f7f7f7', // white
+	light: '#f8f8ff', // white
 };
 
 const SECONDARY = {

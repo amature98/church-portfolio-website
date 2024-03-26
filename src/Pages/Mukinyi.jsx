@@ -1,7 +1,7 @@
 import React from 'react';
-import Template from '../Components/About/Template';
+import Template from '../Components/Template/Church.template';
 import Page from '../Pages/Page';
-import Header from '../Components/Header';
+import Header from '../Components/Header/Header';
 import BgImage from '../Images/church1.jpg';
 import Image from '../Images/elder2.jpg';
 import Leadership from '../Components/About/Leadership';
@@ -12,7 +12,7 @@ import Image2 from '../Images/elder2.jpg'
 import Image3 from '../Images/elder3.jpg'
 
 // Import Arrays 
-import { mukinyiServiceArray } from '../Components/Arrays/Arrays';
+import { mukinyiAccInfo, mukinyiContacts, mukinyiServiceArray } from '../Components/Arrays/Arrays';
 const Leaders = [
 	{
 		name: 'Elder Paul Thairu',
@@ -46,6 +46,8 @@ function Mukinyi() {
 				cardHeader='Elder Paul Thairu'
 				cardTitle='Mukinyi LCC Chairperson'
 				serviceArray={mukinyiServiceArray}
+				ContactArray={mukinyiContacts}
+				contributeInfoArray={mukinyiAccInfo}
 			/>
 			<Leadership
 				title='Mukinyi LCC Leadership'

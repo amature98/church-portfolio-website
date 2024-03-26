@@ -44,9 +44,8 @@ const typography = {
 		fontWeight: fontWeightBold,
 		textTransform: 'capitalize',
 		letterSpacing: 1,
-		color: '#000000',
-		fontSize: responsiveFontSize(12),
-		...responsiveFontSizes({ sm: 10, md: 7.5, lg: 7.5 }),
+		fontSize: responsiveFontSize(8.0),
+		...responsiveFontSizes({ sm: 7.5, md: 6.5, lg: 5.0 }),
 	},
 	h3: {
 		fontFamily: SECONDARY_FONT,

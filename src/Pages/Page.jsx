@@ -9,8 +9,7 @@ function Page({ children, title = '' }) {
 		<>
 			<Box>
 				<Helmet>
-					{' '}
-					<title> {title} </title>{' '}
+					<title> {title} </title>
 				</Helmet>
 				<NavBar />
 				{children}

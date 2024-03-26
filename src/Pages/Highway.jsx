@@ -1,7 +1,7 @@
 import React from 'react';
-import Template from '../Components/About/Template';
+import Template from '../Components/Template/Church.template';
 import Page from '../Pages/Page';
-import Header from '../Components/Header';
+import Header from '../Components/Header/Header';
 import Leadership from '../Components/About/Leadership';
 
 // Import images
@@ -12,7 +12,7 @@ import BgImage from '../Images/church4.jpg';
 import Image from '../Images/elder2.jpg';
 
 // Import Arrays
-import { highwayServiceArray } from '../Components/Arrays/Arrays';
+import { highwayAccInfo, highwayContacts, highwayServiceArray } from '../Components/Arrays/Arrays';
 const Leaders = [
 	{
 		name: 'Elder Kanyi',
@@ -46,6 +46,8 @@ function Highway() {
 				cardHeader='Elder Kanyi'
 				cardTitle='Highway LCC Chairperson'
 				serviceArray={highwayServiceArray}
+				ContactArray={highwayContacts}
+				contributeInfoArray={highwayAccInfo}
 			/>
 			<Leadership
 				title='Highway LCC Leadership'

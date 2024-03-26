@@ -3,7 +3,7 @@ import React from 'react';
 import { Container } from '@mui/material';
 // Import needed pages
 import Page from './Page';
-import Header from '../Components/Header/index';
+import Header from '../Components/Header/Header';
 import Text from '../Components/About/Text';
 import Leadership from '../Components/About/Leadership';
 import BgImage from '../Images/cross.jpg';

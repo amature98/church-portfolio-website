@@ -13,21 +13,10 @@ import HouseOutlinedIcon from '@mui/icons-material/HouseOutlined';
 import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import { makeStyles } from '@mui/styles';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const useStyles = makeStyles((theme) => ({
-	container: {
-		display: 'flex',
-		flexDirection: 'row',
-		justifyContent: 'space-between',
-		alignItems: 'center',
-		padding: ' 90px 32px ',
-	},
-}));
 
 const gridItems = [
 	{
@@ -55,7 +44,6 @@ function GetInvolved() {
 	const titleRef = useRef(null);
 	const itemRef = useRef(null);
 	const textRef = useRef(null);
-	const classes = useStyles();
 	const theme = useTheme();
 	const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 	const [isHovered, setIsHovered] = useState(false);
@@ -114,8 +102,12 @@ function GetInvolved() {
 	return (
 		<Box
 			ref={sectionRef}
-			className={classes.container}
 			sx={{
+				display: 'flex',
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		alignItems: 'center',
+		padding: ' 90px 32px ',
 				backgroundColor: (theme) => theme.palette.primary.main,
 				color: (theme) => theme.palette.primary.light,
 			}}>

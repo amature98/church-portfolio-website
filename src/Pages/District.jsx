@@ -1,6 +1,6 @@
 // Import components
 import React, { useState } from 'react';
-import Header from '../Components/Header/index';
+import Header from '../Components/Header/Header';
 import Page from '../Pages/Page';
 
 // Import Image

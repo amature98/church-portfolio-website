@@ -56,24 +56,15 @@ function LocationsSections({ title, subtitle, ...props }) {
 			start: 'top bottom',
 			end: 'bottom bottom',
 			onEnter: () => {
-				const tl = gsap.timeline({ delay: 1 });
+				const tl = gsap.timeline({ delay: 1.0 });
 				tl
-					.from(titleRef.current, {
+					.from([titleRef.current,subtitleRef.current], {
 						y: 200,
 						opacity: 0,
 						ease: 'power4.out',
 						duration: 3,
+						stagger: 0.2
 					})
-					.from(
-						subtitleRef.current,
-						{
-							x: -100,
-							opacity: 0,
-							ease: 'power4.out',
-							duration: 3,
-						},
-						0,
-					);
 			},
 			once: true,
 		});
@@ -90,14 +81,12 @@ function LocationsSections({ title, subtitle, ...props }) {
 				<Typography
 					ref={titleRef}
 					variant='h2'>
-					{' '}
-					{title}{' '}
+					{title}
 				</Typography>
 				<Typography
 					ref={subtitleRef}
 					variant='quote'>
-					{' '}
-					{subtitle}{' '}
+					{subtitle}
 				</Typography>
 				<Grid
 					container

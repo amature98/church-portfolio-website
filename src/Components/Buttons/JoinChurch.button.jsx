@@ -1,18 +1,30 @@
-import React from 'react';
-import { Button } from '@mui/material';
+import React, { useState } from "react";
+import { Button } from "@mui/material";
+import JoinChurchModal from "../Modals/Joinchurch.modal";
 
-function JoinChurch() {
-	return (
-		<>
-			<Button
-				sx={{
-					background: (theme) => theme.palette.secondary.light,
-					paddingX: 2
-				}}>
-				join us today
-			</Button>
-		</>
-	);
+function JoinChurchButton({ churchName, ContactArray }) {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  return (
+    <>
+      <Button
+        onClick={handleOpen}
+        sx={{
+          background: (theme) => theme.palette.secondary.light,
+          paddingX: 2,
+        }}
+      >
+        join us today
+      </Button>
+      <JoinChurchModal
+        open={open}
+        onClose={handleClose}
+        churchName={churchName}
+        ContactArray={ContactArray}
+      />
+    </>
+  );
 }
 
-export default JoinChurch;
+export default JoinChurchButton;

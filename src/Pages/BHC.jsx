@@ -1,7 +1,7 @@
 import React from 'react';
-import Template from '../Components/About/Template';
+import Template from '../Components/Template/Church.template';
 import Page from '../Pages/Page';
-import Header from '../Components/Header';
+import Header from '../Components/Header/Header';
 import Image from '../Images/elder2.jpg';
 import Leadership from '../Components/About/Leadership';
 
@@ -12,6 +12,7 @@ import Image3 from '../Images/elder3.jpg';
 import BgImage from '../Images/church3.jpg';
 
 import { bhcServiceArray } from '../Components/Arrays/Arrays';
+import { bhcContacts } from '../Components/Arrays/Arrays';
 const Leaders = [
 	{
 		name: 'Elder joseph Mugweru',
@@ -45,6 +46,8 @@ function BHC() {
 				cardHeader='Elder Joseph Mugweru'
 				cardTitle='Mukinyi LCC Chairperson'
 				serviceArray={bhcServiceArray}
+				ContactArray={bhcContacts}
+				contributeInfoArray={bhcServiceArray}
 			/>
 			<Leadership
 				title='BHC LCC Leadership'
