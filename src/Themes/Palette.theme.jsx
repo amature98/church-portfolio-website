@@ -23,12 +23,12 @@ const palette = {
 		light: PRIMARY.light,
 	},
 	action: {
-		active: SECONDARY.main,
-		activeOpacity: 0.25,
-		hover: PRIMARY.main,
-		hoverOpacity: 0.25,
-		selected: PRIMARY.main,
-		selectedOpacity: 0.25,
+		active: SECONDARY.light,
+		activatedOpacity: 0.5,
+		hover: SECONDARY.light,
+		hoverOpacity: 0.5,
+		selected: SECONDARY.light,
+		selectedOpacity: 0.5,
 	},
 };
 export default palette;

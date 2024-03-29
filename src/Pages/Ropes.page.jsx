@@ -9,7 +9,6 @@ function RopesPage() {
           <Page title='R.O.P.E.S - PCEA Mukinyi Parish'>
               <Header
                   height='70vh'
-                  textAlign='center'
                   title='R.O.P.E.S'
                   headerText='lorem ipsum is a dummy text form'
                   bgimage={BgImage}

@@ -23,7 +23,7 @@ function GoogleMaps() {
 				</Box>
 				<Paper
 					elevation={2}
-					sx={{ height: '75vh', width: '90vw', mx: 'auto' }}>
+					sx={{ height: '75vh' }}>
 					<iframe
 						src="https://www.google.com/maps/d/embed?mid=1iHvGgTj1WTg-P9lzgC6mJQ-IVq3MHYY&ehbc=2E312F&noprof=1"
 						title='Google Maps'

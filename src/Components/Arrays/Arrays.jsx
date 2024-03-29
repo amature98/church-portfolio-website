@@ -3,11 +3,19 @@ import Image1 from "../../Images/rev.jpg";
 import Image2 from "../../Images/elder1.jpg";
 import Image3 from "../../Images/elder2.jpg";
 import Image4 from "../../Images/elder3.jpg";
+import church1 from "../../Images/mukinyi.jpg";
+import church2 from "../../Images/church2.jpg";
+import church3 from "../../Images/church3.jpg";
+import church4 from "../../Images/church4.jpg";
 
 import BibleStudy from "../../Images/bible.jpg";
 import Worship from "../../Images/worship.jpg";
 import HolyWeek from "../../Images/holyweek.jpg";
 import Crusade from "../../Images/crusade.jpg";
+
+import ChurchOutlinedIcon from "@mui/icons-material/ChurchOutlined";
+import HouseOutlinedIcon from "@mui/icons-material/HouseOutlined";
+import GroupsOutlinedIcon from "@mui/icons-material/GroupsOutlined";
 // Creating an array of Districts
 export const DistrictArray = [
   { district: "Wendo", elder: "Elder Paul Thairu" },
@@ -79,6 +87,16 @@ export const Leaders = [
   },
 ];
 
+export const CardList = [
+  { title: "Mukinyi Church", image: church1, link: "/mukinyi-church" },
+  { title: "Neema Church", image: church2, link: "/neema-church" },
+  {
+    title: "Blessed Hope Church",
+    image: church3,
+    link: "/blessed-hope-church",
+  },
+  { title: "Highway Church", image: church4, link: "/highway-church" },
+];
 export const Beliefs = [
   {
     title: "Mission",
@@ -91,6 +109,30 @@ export const Beliefs = [
   {
     title: "Theme",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+  },
+];
+
+export const gridItems = [
+  {
+    icon: <ChurchOutlinedIcon />,
+    title: "Church Gatherings",
+    text: "Join us as we gather at any of our churches.",
+    buttontext: "Make a visit",
+    path: "/#churches",
+  },
+  {
+    icon: <HouseOutlinedIcon />,
+    title: "District Fellowships",
+    text: "Locate your small group to have easier and more intimate fellowship.",
+    buttontext: "Find your district",
+    path: "/districts",
+  },
+  {
+    icon: <GroupsOutlinedIcon />,
+    title: "Church Groups",
+    text: "Join our ministries to reach & serve the body of christ - the Church",
+    buttontext: "Find a group",
+    path: "/join-a-Ministry",
   },
 ];
 
@@ -129,6 +171,7 @@ export const events = [
     frequency: "Monthly",
     startTime: "7pm",
     endTime: "8pm",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
   {
     id: 2,
@@ -139,6 +182,7 @@ export const events = [
     frequency: "Once",
     startTime: "7pm",
     endTime: "8pm",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
   {
     id: 3,
@@ -149,6 +193,7 @@ export const events = [
     frequency: "All Week",
     startTime: "7pm",
     endTime: "8pm",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
   {
     id: 4,
@@ -159,6 +204,7 @@ export const events = [
     frequency: "3 Days",
     startTime: "7pm",
     endTime: "8pm",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   },
 ];
 export const highwayContacts = [
@@ -181,30 +227,30 @@ export const bhcContacts = [
 ];
 
 export const mukinyiAccInfo = [
-  { type: "MPesa Paybill Number", number: "124134" },
+  { type: "MPesa Paybill Number", number: "247247" },
   {
     type: "Account Number",
-    number: "# then add your Name or Dsitrict or District Number",
+    number: "124134# then add your Name or District or District Number",
   },
 ];
 export const highwayAccInfo = [
   { type: "MPesa Paybill Number", number: "124134" },
   {
     type: "Account Number",
-    number: "# then add your Name or Dsitrict or District Number",
+    number: "# then add your Name or District or District Number",
   },
 ];
 export const neemaAccInfo = [
   { type: "MPesa Paybill Number", number: "124134" },
   {
     type: "Account Number",
-    number: "# then add your Name or Dsitrict or District Number",
+    number: "# then add your Name or District or District Number",
   },
 ];
 export const bhcAccInfo = [
   { type: "MPesa Paybill Number", number: "124134" },
   {
     type: "Account Number",
-    number: "# then add your Name or Dsitrict or District Number",
+    number: "# then add your Name or District or District Number",
   },
 ];

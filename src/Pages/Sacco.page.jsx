@@ -9,6 +9,7 @@ function Sacco() {
           <Page title='Mukinyi Presbyterian Sacco - PCEA Mukinyi Parish'>
               <Header
                   title='mukinyi presbyterian sacco'
+                  headerText='the sacco headline goes here'
                   bgimage={BgImage}
               />
           </Page>

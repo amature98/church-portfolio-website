@@ -9,6 +9,7 @@ function School() {
           <Page title='Mukinyi Presbyterian Academy'>
               <Header
                   title='Mukinyi Presbyterian Academy'
+                  headerText='school motto goes here'
                   bgimage={BgImage}
               />
           </Page>
