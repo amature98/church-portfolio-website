@@ -22,7 +22,7 @@ function TemplateModal({ open, onClose, leftContent, rightContent }) {
             left: "50%",
             transform: "translate(-50%, -50%)",
             width: "90vw",
-            background: "#f8f8ff",
+            background: (theme) => theme.palette.primary.contrastText,
             borderRadius: 6,
           }}
         >
@@ -36,6 +36,7 @@ function TemplateModal({ open, onClose, leftContent, rightContent }) {
                 sx={{
                   borderRadius: 6,
                   p: 4,
+                  background: (theme) => theme.palette.primary.light,
                 }}
               >
                 {rightContent}

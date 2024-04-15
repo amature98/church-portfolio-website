@@ -11,7 +11,8 @@ function ContributeBtn({ churchName, contributeInfoArray }) {
       <Button
         onClick={handleOpen}
         sx={{
-          background: (theme) => theme.palette.secondary.light,
+          color: (theme) => theme.palette.text.secondary,
+          background: (theme) => theme.palette.secondary.main,
           paddingX: 2,
         }}
       >

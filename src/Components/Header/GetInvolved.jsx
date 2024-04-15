@@ -88,8 +88,7 @@ function GetInvolved() {
         justifyContent: "space-between",
         alignItems: "center",
         padding: " 90px 32px ",
-        backgroundColor: (theme) => theme.palette.primary.main,
-        color: (theme) => theme.palette.primary.light,
+        backgroundColor: (theme) => theme.palette.primary.light,
       }}
     >
       <Grid container spacing={6} flexDirection={isMobile ? "column" : "row"}>
@@ -102,11 +101,9 @@ function GetInvolved() {
             }}
           >
             <Typography ref={titleRef} variant="h4" sx={{ mb: 4 }}>
-              {" "}
               Ways to experience God's Love at Mukinyi
             </Typography>
             <Typography ref={textRef} variant="body2">
-              {" "}
               There are several ways to participate in Mukinyi. Whatever your
               comfort level, there are opportunities for you to join in
               community and draw nearer to Jesus.
@@ -125,12 +122,7 @@ function GetInvolved() {
           >
             {gridItems.map((item) => (
               <Grid key={item.title} item xs={12} sm={12} md={6} lg={6}>
-                <Icon
-                  sx={{
-                    color: (theme) => theme.palette.secondary.light,
-                    fontSize: 40,
-                  }}
-                >
+                <Icon color="secondary" fontSize="large">
                   {item.icon}
                 </Icon>
                 <Typography variant="h4" sx={{ py: 2 }}>
@@ -142,26 +134,14 @@ function GetInvolved() {
                 <Button
                   component={Link}
                   to={item.path}
-                  endIcon={
-                    isHovered ? (
-                      <RemoveIcon
-                        sx={{
-                          color: (theme) => theme.palette.secondary.light,
-                          fontSize: "40px",
-                        }}
-                      />
-                    ) : (
-                      <AddIcon
-                        sx={{
-                          color: (theme) => theme.palette.secondary.light,
-                          fontSize: "40px",
-                        }}
-                      />
-                    )
-                  }
+                  variant="contained"
+                  endIcon={isHovered ? <RemoveIcon /> : <AddIcon />}
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
-                  sx={{ my: 2, color: (theme) => theme.palette.primary.light }}
+                  sx={{
+                    my: 2,
+                    backgroundColor: (theme) => theme.palette.secondary.main,
+                  }}
                 >
                   {item.buttontext}
                 </Button>

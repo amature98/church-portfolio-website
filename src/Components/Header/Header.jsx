@@ -44,7 +44,6 @@ function Header({ title, headerText, height, bgimage }) {
       { scale: 1.2 },
       { scale: 1, duration: 6, ease: "power1.inOut" }
     );
-
     // Animation timeline for title and headerText
     const tl = gsap.timeline({ delay: 1.0 });
     tl.from([titleRef.current.childNodes, headerTextRef.current.childNodes], {
@@ -63,13 +62,22 @@ function Header({ title, headerText, height, bgimage }) {
       {/* Container for title and headerText */}
       <Container sx={{ textAlign: "center", width: "80vw" }}>
         {/* Title */}
-        <Typography variant="h1" component="div" ref={titleRef}>
+        <Typography
+          color="text.secondary"
+          variant="h1"
+          component="div"
+          ref={titleRef}
+        >
           {title &&
             title.split("\n").map((line) => <div key={line}> {line} </div>)}
         </Typography>
-
         {/* Header Text */}
-        <Typography variant="h5" component="div" ref={headerTextRef}>
+        <Typography
+          color="text.secondary"
+          variant="h5"
+          component="div"
+          ref={headerTextRef}
+        >
           {headerText &&
             headerText
               .split("\n")

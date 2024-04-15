@@ -7,6 +7,7 @@ import church1 from "../../Images/mukinyi.jpg";
 import church2 from "../../Images/church2.jpg";
 import church3 from "../../Images/church3.jpg";
 import church4 from "../../Images/church4.jpg";
+import Mukinyi1 from '../../Images/mukinyi1.jpg'
 
 import BibleStudy from "../../Images/bible.jpg";
 import Worship from "../../Images/worship.jpg";
@@ -252,5 +253,19 @@ export const bhcAccInfo = [
   {
     type: "Account Number",
     number: "# then add your Name or District or District Number",
+  },
+];
+export const mukinyiCarousel = [
+  {
+    id: 1,
+    image: church1,
+    title: "Mukinyi Church",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: 2,
+    image: Mukinyi1,
+    title: "Mukinyi Church",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];

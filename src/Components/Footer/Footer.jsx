@@ -15,7 +15,7 @@ function Footer() {
         sx={{
           width: "90vw",
           margin: "auto",
-          color: (theme) => theme.palette.primary.light,
+          color: (theme) => theme.palette.primary.contrastText,
         }}
       >
         <Grid container spacing={6}>

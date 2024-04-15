@@ -3,18 +3,19 @@ import Template from "../Components/Template/Church.template";
 import Page from "./Page";
 import Header from "../Components/Header/Header";
 
-import Leadership from "../Components/About/Leadership";
+import Leadership from "../Components/Components/Leadership";
+import Carousel from "../Components/Carousel/Carousel";
 
 // Import images
 import Image1 from "../Images/elder1.jpg";
 import Image2 from "../Images/elder2.jpg";
 import Image3 from "../Images/elder3.jpg";
 import BgImage from "../Images/mukinyi.jpg";
-import Image from "../Images/elder2.jpg";
 
 // Import Arrays
 import {
   mukinyiAccInfo,
+  mukinyiCarousel,
   mukinyiContacts,
   mukinyiServiceArray,
 } from "../Components/Arrays/Arrays";
@@ -47,16 +48,12 @@ function Mukinyi() {
         churchName="Mukinyi Church"
         text='"At P.C.E.A Mukinyi Church, we believe that the great commission is our mandate as the church of Jesus Christ and we ensure that we create a platform that allows members to express the different graces that have been apportioned to them by God. We encourage each other into growing towards Jesus Christ and make it our business to go out and show Him to the lost and lonely."'
         image={Image}
-        cardHeader="Elder Paul Thairu"
-        cardTitle="Mukinyi LCC Chairperson"
         serviceArray={mukinyiServiceArray}
         ContactArray={mukinyiContacts}
         contributeInfoArray={mukinyiAccInfo}
-      />
-      <Leadership
-        title="Mukinyi LCC Leadership"
         leadersArray={Leaders}
-        textAlign="center"
+        title="Mukinyi LCC Leadership"
+        CarouselArray={mukinyiCarousel}
       />
     </Page>
   );

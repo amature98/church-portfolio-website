@@ -4,7 +4,6 @@ import {
   Button,
   InputAdornment,
   MenuItem,
-  Paper,
   TextField,
   Typography,
 } from "@mui/material";
@@ -12,11 +11,16 @@ import PersonIcon from "@mui/icons-material/Person";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 
-function Form() {
+function Form({ title, options, buttonLabel, buttonOnClick }) {
   return (
     <>
-      <Box component="form" noValidate autoComplete="off">
-        <Typography variant="h4">Let's get to know you</Typography>
+      <Box
+        sx={{ color: (theme) => theme.palette.primary.dark }}
+        component="form"
+        noValidate
+        autoComplete="off"
+      >
+        <Typography variant="h4"> {title} </Typography>
         <TextField
           required
           id="name"
@@ -27,7 +31,7 @@ function Form() {
           sx={{ my: 2 }}
           InputProps={{
             endAdornment: (
-              <InputAdornment>
+              <InputAdornment position="end">
                 <PersonIcon />
               </InputAdornment>
             ),
@@ -43,7 +47,7 @@ function Form() {
           sx={{ my: 2 }}
           InputProps={{
             endAdornment: (
-              <InputAdornment>
+              <InputAdornment position="end">
                 <PhoneIcon />
               </InputAdornment>
             ),
@@ -59,7 +63,7 @@ function Form() {
           sx={{ my: 2 }}
           InputProps={{
             endAdornment: (
-              <InputAdornment>
+              <InputAdornment position="end">
                 <EmailIcon />
               </InputAdornment>
             ),
@@ -75,18 +79,24 @@ function Form() {
           size="small"
           sx={{ my: 2 }}
         >
-          <MenuItem>Yes</MenuItem>
-          <MenuItem>No</MenuItem>
+          {options.map((option, index) => (
+            <MenuItem key={index} value={option}>
+              {option}
+            </MenuItem>
+          ))}
         </TextField>
-        <Button
-          variant="contained"
-          sx={{
-            my: 2,
-            background: (theme) => theme.palette.secondary.light,
-          }}
-        >
-          Join us
-        </Button>
+        {buttonLabel && buttonOnClick && (
+          <Button
+            variant="contained"
+            onClick={buttonOnClick}
+            sx={{
+              my: 2,
+              background: (theme) => theme.palette.secondary.main,
+            }}
+          >
+            {buttonLabel}
+          </Button>
+        )}
       </Box>
     </>
   );

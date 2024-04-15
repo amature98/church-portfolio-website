@@ -2,13 +2,11 @@
 import React, { useState } from "react";
 import Header from "../Components/Header/Header";
 import Page from "./Page";
-
 // Import Image
 import BgImage from "../Images/districts.jpg";
-
 // Import components
-import GoogleMaps from "../Components/About/GoogleMaps";
-import DistrictTable from "../Components/About/DistrictTable";
+import GoogleMaps from "../Components/Components/GoogleMaps";
+import DistrictTable from "../Components/Components/DistrictTable";
 // Import District array
 import { DistrictArray } from "../Components/Arrays/Arrays";
 

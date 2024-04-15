@@ -12,6 +12,7 @@ function GroupTemplate({ groupName, groupImage, groupMotto }) {
           headerText={groupMotto}
           bgimage={groupImage}
         />
+        
       </Page>
     </>
   );

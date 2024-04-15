@@ -3,7 +3,7 @@ import Template from "../Components/Template/Church.template";
 import Page from "./Page";
 import Header from "../Components/Header/Header";
 import Image from "../Images/elder2.jpg";
-import Leadership from "../Components/About/Leadership";
+import Leadership from "../Components/Components/Leadership";
 
 // Import images
 import Image1 from "../Images/elder1.jpg";

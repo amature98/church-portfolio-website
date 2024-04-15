@@ -91,7 +91,6 @@ function LargeScreenNavbar({ window }) {
       </Box>
       {/* Menu Icon */}
       <IconButton
-        color="inherit"
         size="large"
         aria-label="togglebtn"
         onClick={toggleDrawer}

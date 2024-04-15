@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 // Styled LinkButton component
 const LinkButton = styled(Button)(({ theme }) => ({
-  marginRight: 4,
-  color: theme.palette.primary.light,
+  marginX: 4,
+  color: theme.palette.primary.contrastText,
   ":hover": {
     backgroundColor: alpha(
-      theme.palette.secondary.light,
+      theme.palette.secondary.main,
       theme.palette.action.hoverOpacity
     ),
   },
@@ -19,18 +19,15 @@ const LinkButton = styled(Button)(({ theme }) => ({
 function NavLinkButton({ active, item, ...props }) {
   // Destructure title and path from the item object
   const { title, path } = item;
-
   // Check if the link is active
   const isActive = active(item.path);
-
   // Get theme
   const theme = useTheme();
-
   // Styles for active NavLink
   const activeNavLinkStyle = {
-    color: "primary.light",
+    color: "text.secondary",
     backgroundColor: alpha(
-      theme.palette.secondary.light,
+      theme.palette.secondary.main,
       theme.palette.action.selectedOpacity
     ),
   };

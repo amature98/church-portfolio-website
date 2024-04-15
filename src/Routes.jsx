@@ -39,7 +39,7 @@ function Routes() {
     { path: "/events", element: <Events /> },
     { path: "/events/:id", element: <Event /> },
     // Routes to ministries
-    { path: "//pcmf", element: <PcmfPage /> },
+    { path: "/pcmf", element: <PcmfPage /> },
     { path: "/womans-guild", element: <WomensPage /> },
     { path: "/children-ministry", element: <ChilrenPage /> },
     { path: "/youth-fellowship", element: <YouthPage /> },

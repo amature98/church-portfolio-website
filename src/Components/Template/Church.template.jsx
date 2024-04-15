@@ -2,6 +2,8 @@ import React from "react";
 import { Box, Divider, Paper, Stack, Typography } from "@mui/material";
 import JoinChurchButton from "../Buttons/JoinChurch.button";
 import ContributeButton from "../Buttons/Contribute.button";
+import Leadership from "../Components/Leadership";
+import Carousel from "../Carousel/Carousel";
 
 function Template({
   churchName = "",
@@ -9,6 +11,9 @@ function Template({
   serviceArray,
   ContactArray,
   contributeInfoArray,
+  CarouselArray,
+  leadersArray,
+  title = "",
 }) {
   return (
     <>
@@ -42,7 +47,7 @@ function Template({
       <Box
         sx={{
           p: 4,
-          backgroundColor: (theme) => theme.palette.primary.main,
+          backgroundColor: (theme) => theme.palette.primary.light,
         }}
       >
         <Box
@@ -60,12 +65,7 @@ function Template({
           <Stack
             direction="row"
             divider={
-              <Divider
-                orientation="vertical"
-                flexItem
-                variant="middle"
-                sx={{ backgroundColor: "text.light" }}
-              />
+              <Divider orientation="vertical" flexItem variant="middle" />
             }
           >
             {serviceArray.map((item, index) => (
@@ -74,7 +74,7 @@ function Template({
                   textAlign: "center",
                   px: 2,
                   py: 2,
-                  backgroundColor: (theme) => theme.palette.primary.main,
+                  backgroundColor: (theme) => theme.palette.primary.light,
                 }}
                 key={index}
                 elevation={0}
@@ -90,6 +90,12 @@ function Template({
           </Stack>
         </Box>
       </Box>
+      <Leadership
+        title={title}
+        leadersArray={leadersArray}
+        textAlign="center"
+      />
+      <Carousel CarouselArray={CarouselArray} />
     </>
   );
 }

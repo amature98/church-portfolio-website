@@ -24,14 +24,13 @@ function AboutSection({ title, aboutText, button, ...props }) {
           opacity: 0,
           ease: "power4.out",
           duration: 3,
-        })
-        tl.from( textRef.current, {
+        });
+        tl.from(textRef.current, {
           y: 200,
           opacity: 0,
           ease: "power4.out",
           duration: 3,
-        })
-          .from(buttonRef.current, {
+        }).from(buttonRef.current, {
           opacity: 0,
           ease: "power4.out",
           delay: 0.5,
@@ -75,7 +74,7 @@ function AboutSection({ title, aboutText, button, ...props }) {
             endIcon={<ArrowForwardIcon fontSize="large" />}
             sx={{
               m: 4,
-              background: (theme) => theme.palette.secondary.light,
+              background: (theme) => theme.palette.secondary.main,
             }}
           >
             know more
