@@ -1,11 +1,11 @@
 import { Button } from "@mui/material";
 import React, { useState } from "react";
 import JoinGroupModal from "../Modals/JoinGroup.modal";
-const [open, setOpen] = useState(false);
-const handleOpen = setOpen(!open);
-const handleClose = setOpen(open);
 
 function JoinGroupButton({ groupName, ContactArray }) {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <>
       <Button
@@ -16,13 +16,14 @@ function JoinGroupButton({ groupName, ContactArray }) {
           paddingX: 2,
         }}
       >
-        <JoinGroupModal
-          open={open}
-          onClose={handleClose}
-          groupName={groupName}
-          ContactArray={ContactArray}
-        />
+        join group
       </Button>
+      <JoinGroupModal
+        open={open}
+        onClose={handleClose}
+        groupName={groupName}
+        ContactArray={ContactArray}
+      />
     </>
   );
 }

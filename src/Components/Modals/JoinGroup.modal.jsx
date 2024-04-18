@@ -2,7 +2,7 @@ import React from "react";
 import TemplateModal from "./Template.modal";
 import LeftContent from "./LeftContent";
 import Form from "./Form";
-groups = [
+const groups = [
   "PCMF",
   "Womans Guild",
   "Children's Ministry",

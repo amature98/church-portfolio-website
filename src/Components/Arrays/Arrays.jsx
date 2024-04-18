@@ -7,7 +7,7 @@ import church1 from "../../Images/mukinyi.jpg";
 import church2 from "../../Images/church2.jpg";
 import church3 from "../../Images/church3.jpg";
 import church4 from "../../Images/church4.jpg";
-import Mukinyi1 from '../../Images/mukinyi1.jpg'
+import Mukinyi1 from "../../Images/mukinyi1.jpg";
 
 import BibleStudy from "../../Images/bible.jpg";
 import Worship from "../../Images/worship.jpg";
@@ -226,6 +226,10 @@ export const bhcContacts = [
   { type: "email", contact: "bhc@email.com" },
   { type: "phone", contact: "+254 7xx xxx" },
 ];
+export const contacts = [
+  { tile: "youth",type: 'E-Mail Address',  contact: "mukinyiyouth254@gmail.com" },
+  { tile: "pcmf",type: 'E-Mail Address', contact: "pcmf@gmail.com" },
+];
 
 export const mukinyiAccInfo = [
   { type: "MPesa Paybill Number", number: "247247" },
@@ -266,6 +270,26 @@ export const mukinyiCarousel = [
     id: 2,
     image: Mukinyi1,
     title: "Mukinyi Church",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+];
+import sport from '../../Images/sports.jpg'
+import worship from '../../Images/we.jpg'
+import youthWeek from '../../Images/youth-week.jpg'
+export const youthCarousel = [
+  {
+    id: 1,
+    image: sport,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: 2,
+    image: worship,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: 3,
+    image: youthWeek,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
