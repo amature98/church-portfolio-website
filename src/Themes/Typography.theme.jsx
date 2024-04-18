@@ -31,7 +31,7 @@ const typography = {
 	fontWeight: fontWeightRegular,
 	h1: {
 		fontFamily: SECONDARY_FONT,
-		fontWeight: fontWeightThin,
+		fontWeight: fontWeightBold,
 		lineHeight: 1.0,
 		textTransform: 'uppercase',
 		letterSpacing: -1.5,
