@@ -20,7 +20,7 @@ function index({
 }) {
   return (
     <>
-      <Card sx={{ display: "flex" }} raised>
+      <Card sx={{ display: "flex" }} raised variant="">
         <Grid container>
           {direction === "left" ? (
             <>

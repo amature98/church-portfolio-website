@@ -30,7 +30,7 @@ function GroupTemplate({
           component="section"
           sx={{
             width: "90vw",
-            marginY: 6,
+            mt: 6,
             marginX: "auto",
             display: "flex",
             flexDirection: 'column',
