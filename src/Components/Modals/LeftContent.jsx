@@ -4,7 +4,7 @@ import {Box, Typography, Stack} from '@mui/material'
 function LeftContent({title, subTitle, text, array}) {
   return (
     <>
-      <Box sx={{ p: 3 }}>
+      <Box sx={{ p: 3}}>
         <Typography variant="h4">{title}</Typography>
         <Typography gutterBottom variant="body2">
           {subTitle}
@@ -14,7 +14,7 @@ function LeftContent({title, subTitle, text, array}) {
         </Typography>
         <Stack direction="column">
           {array.map((contact, index) => (
-            <Typography key={index} gutterBottom variant="h6">
+            <Typography key={index} gutterBottom variant="body2">
               {contact.type}: {contact.contact}
             </Typography>
           ))}

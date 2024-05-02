@@ -6,8 +6,12 @@ import { Button } from "@mui/material";
 function LogoNavLink() {
   return (
     <>
-      <Button component={Link} to="/">
-        <img src={''} alt="logo" />
+      <Button
+        component={Link}
+        to="/"
+        sx={{ width: 40, height: 40, display: "inline-flex" }}
+      >
+        <img src="/Logo_Main/apple-touch-icon.png" alt="logo" />
       </Button>
     </>
   );

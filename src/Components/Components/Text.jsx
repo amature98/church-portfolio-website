@@ -7,7 +7,7 @@ function Text() {
     <>
       <Box component="section" id="beliefs">
         <Card
-          elevation={6}
+          raised
           sx={{
             mb: 4,
             p: 4,
@@ -37,7 +37,7 @@ function Text() {
           </Typography>
         </Card>
         <Card
-          elevation={6}
+          raised
           sx={{
             mb: 4,
             p: 4,
@@ -57,7 +57,7 @@ function Text() {
           </Typography>
         </Card>
         <Card
-          elevation={6}
+          raised
           sx={{
             mb: 4,
             p: 4,

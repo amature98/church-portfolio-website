@@ -35,7 +35,7 @@ function Leadership({ title='', leadersArray, textAlign = 'start' }) {
 							lg={3}
 							key={index}>
 							<Card
-								elevation={6}
+								raised
 								sx={{ borderRadius: 3, width: '100%' }}>
 								<CardMedia
 									sx={{ height: '30vh' }}

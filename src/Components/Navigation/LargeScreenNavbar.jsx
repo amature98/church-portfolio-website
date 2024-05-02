@@ -41,7 +41,7 @@ function LargeScreenNavbar({ window }) {
       {/* Navigation Links */}
       <Box
         sx={{
-          display: "flex",
+          display: "inline-flex",
         }}
       >
         {largeScreenLinks.map((link) =>
