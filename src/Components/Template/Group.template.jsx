@@ -33,7 +33,7 @@ function GroupTemplate({
             mt: 6,
             marginX: "auto",
             display: "flex",
-            flexDirection: 'column',
+            flexDirection: "column",
             alignItems: "center",
           }}
         >
@@ -51,7 +51,9 @@ function GroupTemplate({
             direction="left"
           />
         </Box>
-        <Box><Carousel CarouselArray={CarouselArray} /></Box>
+        <Box>
+          <Carousel CarouselArray={CarouselArray} />
+        </Box>
       </Page>
     </>
   );

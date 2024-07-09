@@ -135,6 +135,13 @@ export const gridItems = [
     buttontext: "Find a group",
     path: "/join-a-Ministry",
   },
+  {
+    icon: <GroupsOutlinedIcon />,
+    title: "Pay to God",
+    text: "You can contribute finacially through offerings, tithes, thanksgiving or generous donations.",
+    buttontext: "Contribute",
+    path: "/join-a-Ministry",
+  },
 ];
 
 export const mukinyiServiceArray = [
@@ -227,8 +234,12 @@ export const bhcContacts = [
   { type: "phone", contact: "+254 7xx xxx" },
 ];
 export const contacts = [
-  { tile: "youth",type: 'E-Mail Address',  contact: "mukinyiyouth254@gmail.com" },
-  { tile: "pcmf",type: 'E-Mail Address', contact: "pcmf@gmail.com" },
+  {
+    tile: "youth",
+    type: "E-Mail Address",
+    contact: "mukinyiyouth254@gmail.com",
+  },
+  { tile: "pcmf", type: "E-Mail Address", contact: "pcmf@gmail.com" },
 ];
 
 export const mukinyiAccInfo = [
@@ -273,9 +284,9 @@ export const mukinyiCarousel = [
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
-import sport from '../../Images/sports.jpg'
-import worship from '../../Images/we.jpg'
-import youthWeek from '../../Images/youth-week.jpg'
+import sport from "../../Images/sports.jpg";
+import worship from "../../Images/we.jpg";
+import youthWeek from "../../Images/youth-week.jpg";
 export const youthCarousel = [
   {
     id: 1,

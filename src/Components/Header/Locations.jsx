@@ -73,7 +73,7 @@ function LocationsSections({ title, subtitle, ...props }) {
         <Typography ref={titleRef} variant="h2">
           {title}
         </Typography>
-        <Typography ref={subtitleRef} variant="quote">
+        <Typography ref={subtitleRef} variant="body1">
           {subtitle}
         </Typography>
         <Grid container spacing={3} sx={{ p: { xs: 3, lg: 8 } }}>

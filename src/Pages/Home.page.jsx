@@ -14,15 +14,15 @@ function Home() {
     <>
       <Page title="Home - PCEA MUKINYI PARISH">
         <Header
-          title="Mukinyi Parish"
-          headerText="Inspiring people to follow Jesus Christ in faith, love and hope."
+          title="PCEA Mukinyi Parish"
+          headerText="Inspiring people to follow Jesus Christ in faith; a place where love abounds and hope fills up."
           height="100vh"
           bgimage={HeaderBgimg}
         />
         <AboutSection
-          title="Welcome to Mukinyi Parish"
+          title="Welcome to PCEA Mukinyi Parish"
           aboutText={
-            "Welcome to Mukinyi Parish, where faith meets community and hope sustains. We invite you to join us on a journey of spiritual growth and fellowship. Whether you're seeking solace, friendship, or a deeper connection with your faith, you'll find a warm embrace and open hearts here. Come as you are, and let's walk together in the light of God's love."
+            "Welcome to PCEA Mukinyi Parish, where faith meets community and hope sustains. We invite you to join us on a journey of spiritual growth and fellowship. Whether you're seeking solace, friendship, or a deeper connection with your faith, you'll find a warm embrace and open hearts here. Come as you are, and let's walk together in the light of God's love."
           }
           button="know more"
         />

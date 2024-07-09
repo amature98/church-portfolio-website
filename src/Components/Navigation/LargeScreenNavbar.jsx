@@ -1,34 +1,33 @@
-import React, { useState } from "react";
-// Import Links array
-import { largeScreenLinks, navLinks } from "./NavLinks";
-// Import react-router-dom functions
-import { matchPath, useLocation } from "react-router-dom";
-// Importing MUI Commponents
-import { Box, IconButton, Menu, MenuItem } from "@mui/material";
-// Import Customised Component
-import NavLinkButton from "../Buttons/NavLinkButton";
-import NavDrawer from "./NavDrawer";
-import LogoNavLink from "../Buttons/LogoNavLink";
-// Import Icon
+import React, { useState, useCallback } from "react";
+import { useLocation, matchPath } from "react-router-dom";
+import {
+  Box,
+  IconButton,
+  Menu,
+  MenuItem,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-function LargeScreenNavbar({ window }) {
-  // Determine container for the Menu
-  const container =
-    window !== undefined ? () => window.document.body : undefined;
-  // State for drawer
+import { largeScreenLinks, navLinks } from "./NavLinks";
+import NavLinkButton from "../Buttons/NavLinkButton";
+import NavDrawer from "./NavDrawer";
+import LogoNavLink from "../Buttons/LogoNavLink";
+
+function LargeScreenNavbar() {
   const [open, setOpen] = useState(false);
-  const toggleDrawer = () => setOpen((prevState) => !prevState);
-  // State for menu
   const [anchorEl, setAnchorEl] = useState(null);
-  const handleClick = (event) => setAnchorEl(event.currentTarget);
-  const handleClose = () => setAnchorEl(null);
-  // Get current path
   const { pathname } = useLocation();
-  // Function to check if a link is active
-  const active = (path) =>
-    path ? !!matchPath({ path, end: false }, pathname) : false;
+
+  const toggleDrawer = useCallback(() => setOpen((prevState) => !prevState), []);
+  const handleClick = useCallback((event) => setAnchorEl(event.currentTarget), []);
+  const handleClose = useCallback(() => setAnchorEl(null), []);
+
+  const isActive = useCallback(
+    (path) => (path ? !!matchPath({ path, end: false }, pathname) : false),
+    [pathname]
+  );
+
   return (
     <Box
       sx={{
@@ -36,31 +35,26 @@ function LargeScreenNavbar({ window }) {
         justifyContent: "space-between",
       }}
     >
-      {/* Logo */}
       <LogoNavLink />
-      {/* Navigation Links */}
-      <Box
-        sx={{
-          display: "inline-flex",
-        }}
-      >
+      <Box sx={{ display: "inline-flex" }}>
         {largeScreenLinks.map((link) =>
           link.title === "Ministries" ? (
-            // Dropdown Menu for "Ministries" link
             <Box
               key={link.title}
               onMouseEnter={handleClick}
               onMouseLeave={handleClose}
             >
               <NavLinkButton
-                key={link.title}
+                id="basic-button"
+                aria-controls={open ? "basic-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
                 item={link}
-                active={active}
+                active={isActive}
                 endIcon={<KeyboardArrowDownIcon />}
               />
-              {/* Menu for "Ministries" */}
               <Menu
-                elevation={24}
+                id="basic-menu"
                 anchorEl={anchorEl}
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
@@ -72,38 +66,32 @@ function LargeScreenNavbar({ window }) {
                     backgroundColor: (theme) => theme.palette.primary.main,
                   },
                 }}
+                MenuListProps={{
+                  "aria-labelledby": "basic-button",
+                }}
               >
-                {/* Render Ministries links */}
                 {navLinks
                   .filter((item) => item.filter === "Ministries")
                   .map((ministry) => (
                     <MenuItem key={ministry.title} onClick={handleClose}>
-                      <NavLinkButton item={ministry} active={active} />
+                      <NavLinkButton item={ministry} active={isActive} />
                     </MenuItem>
                   ))}
               </Menu>
             </Box>
           ) : (
-            // Regular NavLinkButton
-            <NavLinkButton key={link.title} item={link} active={active} />
+            <NavLinkButton key={link.title} item={link} active={isActive} />
           )
         )}
       </Box>
-      {/* Menu Icon */}
       <IconButton
         size="large"
-        aria-label="togglebtn"
+        aria-label="toggle drawer"
         onClick={toggleDrawer}
       >
         <MenuIcon />
       </IconButton>
-      {/* Navigation Drawer */}
-      <NavDrawer
-        open={open}
-        onClose={toggleDrawer}
-        container={container}
-        onClick={toggleDrawer}
-      />
+      <NavDrawer open={open} onClose={toggleDrawer} onClick={toggleDrawer} />
     </Box>
   );
 }

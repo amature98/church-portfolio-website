@@ -54,7 +54,12 @@ function NavDrawer({
         direction="row"
         justifyContent="space-between"
         alignItems="flex-start"
-        sx={{ borderBottom: "0.1px solid #f7f7f7", mb: "30px", px: {xs: 1, sm: 2, md: 4, lg: 6}, pb: 2 }}
+        sx={{
+          borderBottom: (theme) => `0.1px solid ${theme.palette.divider} `,
+          mb: "30px",
+          px: { xs: 1, sm: 2, md: 4, lg: 6 },
+          pb: 2,
+        }}
       >
         <LogoNavLink />
         <IconButton aria-label="close" onClick={onClick}>

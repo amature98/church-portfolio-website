@@ -1,18 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@mui/material";
-// import Logo from "../../Images/logo.png";
+import { Box } from "@mui/material";
+import Logo from "../../Images/logo.png";
 
 function LogoNavLink() {
   return (
     <>
-      <Button
+      <Box
         component={Link}
         to="/"
-        sx={{ width: 40, height: 40, display: "inline-flex" }}
+        sx={{
+          width: 40,
+          height: 40,
+          cursor: "pointer",
+          display: "inline-flex",
+        }}
       >
-        <img src="/Logo_Main/apple-touch-icon.png" alt="logo" />
-      </Button>
+        <img src={Logo} alt="logo" />
+      </Box>
     </>
   );
 }

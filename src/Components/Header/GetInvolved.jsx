@@ -1,17 +1,19 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import {
   Box,
-  Typography,
+  Button,
   Grid,
+  Icon,
+  Typography,
   useMediaQuery,
   useTheme,
-  Button,
-  Icon,
 } from "@mui/material";
+
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
 import { Link } from "react-router-dom";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
@@ -26,59 +28,50 @@ function GetInvolved() {
   const textRef = useRef(null);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
-  const [isHovered, setIsHovered] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleMouseEnter = useCallback((index) => setHoveredIndex(index), []);
+  const handleMouseLeave = useCallback(() => setHoveredIndex(null), []);
 
   useEffect(() => {
+    const animateElements = () => {
+      const tl = gsap.timeline();
+      tl.from(titleRef.current, {
+        y: 200,
+        opacity: 0,
+        ease: "power4.out",
+        duration: 3,
+      })
+        .from(
+          textRef.current,
+          {
+            y: 200,
+            opacity: 0,
+            ease: "power4.out",
+            duration: 3,
+          },
+          "<"
+        )
+        .from(
+          itemRef.current,
+          {
+            y: 200,
+            opacity: 0,
+            ease: "power4.out",
+            duration: 3,
+          },
+          "<"
+        );
+    };
     ScrollTrigger.create({
       trigger: sectionRef.current,
       start: "top bottom",
       end: "bottom bottom",
-      onEnter: () => {
-        const tl = gsap.timeline();
-        tl.from(titleRef.current, {
-          y: 200,
-          opacity: 0,
-          ease: "power4.out",
-          duration: 3,
-        });
-      },
+      onEnter: animateElements,
       once: true,
     });
-  }, [titleRef]);
-  useEffect(() => {
-    ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: "top bottom",
-      end: "bottom bottom",
-      onEnter: () => {
-        const tl = gsap.timeline({ delay: 1 });
-        tl.from(textRef.current, {
-          y: 200,
-          opacity: 0,
-          ease: "power4.out",
-          duration: 3,
-        });
-      },
-      once: true,
-    });
-  }, [textRef]);
-  useEffect(() => {
-    ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: "top bottom",
-      end: "bottom bottom",
-      onEnter: () => {
-        const tl = gsap.timeline({ delay: 1 });
-        tl.from(itemRef.current, {
-          y: 200,
-          opacity: 0,
-          ease: "power4.out",
-          duration: 3,
-        });
-      },
-      once: true,
-    });
-  }, [itemRef]);
+  }, []);
+
   return (
     <Box
       ref={sectionRef}
@@ -97,13 +90,12 @@ function GetInvolved() {
             sx={{
               width: isMobile ? "80vw" : "initial",
               margin: isMobile ? "auto" : "initial",
-              textAlign: isMobile ? "center" : "",
             }}
           >
-            <Typography ref={titleRef} variant="h4" sx={{ mb: 4 }}>
+            <Typography ref={titleRef} variant="h2" sx={{ mb: 4 }}>
               Ways to experience God's Love at Mukinyi
             </Typography>
-            <Typography ref={textRef} variant="body2">
+            <Typography ref={textRef} variant="body1">
               There are several ways to participate in Mukinyi. Whatever your
               comfort level, there are opportunities for you to join in
               community and draw nearer to Jesus.
@@ -120,24 +112,26 @@ function GetInvolved() {
               margin: isMobile ? "auto" : "",
             }}
           >
-            {gridItems.map((item) => (
+            {gridItems.map((item, index) => (
               <Grid key={item.title} item xs={12} sm={12} md={6} lg={6}>
                 <Icon color="secondary" fontSize="large">
                   {item.icon}
                 </Icon>
-                <Typography variant="h4" sx={{ py: 2 }}>
+                <Typography variant="h3" sx={{ pt: 1.5 }}>
                   {item.title}
                 </Typography>
-                <Typography variant="body2" sx={{ py: 2 }}>
+                <Typography variant="body1" sx={{ py: 1.0 }}>
                   {item.text}
                 </Typography>
                 <Button
                   component={Link}
                   to={item.path}
                   variant="contained"
-                  endIcon={isHovered ? <RemoveIcon /> : <AddIcon />}
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
+                  endIcon={
+                    hoveredIndex === index ? <RemoveIcon /> : <AddIcon />
+                  }
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
                   sx={{
                     my: 2,
                     backgroundColor: (theme) => theme.palette.secondary.main,

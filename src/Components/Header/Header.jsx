@@ -74,7 +74,7 @@ function Header({ title, headerText, height, bgimage }) {
         {/* Header Text */}
         <Typography
           color="text.secondary"
-          variant="h5"
+          variant="h4"
           component="div"
           ref={headerTextRef}
         >
