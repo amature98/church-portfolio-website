@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 
 import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 
 import { Link } from "react-router-dom";
 
@@ -19,13 +19,12 @@ import { ScrollTrigger } from "gsap/all";
 
 import { gridItems } from "../Arrays/Arrays";
 
+import TextAnimation from "../TextAnimation/TextAnimation";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function GetInvolved() {
   const sectionRef = useRef(null);
-  const titleRef = useRef(null);
-  const itemRef = useRef(null);
-  const textRef = useRef(null);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -36,39 +35,42 @@ function GetInvolved() {
   useEffect(() => {
     const animateElements = () => {
       const tl = gsap.timeline();
-      tl.from(titleRef.current, {
-        y: 200,
-        opacity: 0,
-        ease: "power4.out",
-        duration: 3,
-      })
-        .from(
-          textRef.current,
-          {
-            y: 200,
-            opacity: 0,
-            ease: "power4.out",
-            duration: 3,
-          },
-          "<"
-        )
-        .from(
-          itemRef.current,
-          {
-            y: 200,
-            opacity: 0,
-            ease: "power4.out",
-            duration: 3,
-          },
-          "<"
-        );
+      tl.from(
+        sectionRef.current.querySelectorAll(".animate-title, .animate-text"),
+        {
+          y: 200,
+          opacity: 0,
+          ease: "power4.out",
+          duration: 3,
+          stagger: 1,
+        }
+      );
     };
+
     ScrollTrigger.create({
       trigger: sectionRef.current,
       start: "top bottom",
       end: "bottom bottom",
       onEnter: animateElements,
       once: true,
+    });
+
+    gridItems.forEach((item, index) => {
+      ScrollTrigger.create({
+        trigger: `.grid-item-${index}`,
+        start: "top bottom",
+        end: "bottom bottom",
+        onEnter: () => {
+          const tl = gsap.timeline();
+          tl.from(`.grid-item-${index}`, {
+            y: 200,
+            opacity: 0,
+            ease: "power4.out",
+            duration: 2,
+          });
+        },
+        once: true,
+      });
     });
   }, []);
 
@@ -80,7 +82,8 @@ function GetInvolved() {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: " 90px 32px ",
+        padding: "90px 32px",
+        textAlign: isMobile ? "center" : "start",
         backgroundColor: (theme) => theme.palette.primary.light,
       }}
     >
@@ -92,19 +95,26 @@ function GetInvolved() {
               margin: isMobile ? "auto" : "initial",
             }}
           >
-            <Typography ref={titleRef} variant="h2" sx={{ mb: 4 }}>
-              Ways to experience God's Love at Mukinyi
-            </Typography>
-            <Typography ref={textRef} variant="body1">
-              There are several ways to participate in Mukinyi. Whatever your
-              comfort level, there are opportunities for you to join in
-              community and draw nearer to Jesus.
-            </Typography>
+            <TextAnimation
+              text={"Ways to experience God's Love at Mukinyi"}
+              variant="h2"
+              sx={{ mb: 4 }}
+              trigger={sectionRef.current}
+              className="animate-title"
+            />
+            <TextAnimation
+              text={
+                "There are several ways to participate at PCEA Mukinyi Parish. Whatever your comfort level, there are opportunities for you to join in community and draw nearer to Jesus."
+              }
+              variant="body1"
+              delay={1.0}
+              trigger={sectionRef.current}
+              className="animate-text"
+            />
           </Box>
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={8}>
           <Grid
-            ref={itemRef}
             container
             spacing={6}
             sx={{
@@ -113,7 +123,15 @@ function GetInvolved() {
             }}
           >
             {gridItems.map((item, index) => (
-              <Grid key={item.title} item xs={12} sm={12} md={6} lg={6}>
+              <Grid
+                key={item.title}
+                item
+                xs={12}
+                sm={12}
+                md={6}
+                lg={6}
+                className={`grid-item-${index}`}
+              >
                 <Icon color="secondary" fontSize="large">
                   {item.icon}
                 </Icon>
@@ -128,7 +146,11 @@ function GetInvolved() {
                   to={item.path}
                   variant="contained"
                   endIcon={
-                    hoveredIndex === index ? <RemoveIcon /> : <AddIcon />
+                    hoveredIndex === index ? (
+                      <ArrowForwardIosRoundedIcon />
+                    ) : (
+                      <AddIcon />
+                    )
                   }
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}

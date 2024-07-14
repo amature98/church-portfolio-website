@@ -5,6 +5,7 @@ import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { ScrollTrigger } from "gsap/all";
 import { CardList } from "../Arrays/Arrays";
+import TextAnimation from "../TextAnimation/TextAnimation";
 
 const Item = styled(Card)(({ theme }) => ({
   textAlign: "center",
@@ -70,12 +71,13 @@ function LocationsSections({ title, subtitle, ...props }) {
           py: 4,
         }}
       >
-        <Typography ref={titleRef} variant="h2">
-          {title}
-        </Typography>
-        <Typography ref={subtitleRef} variant="body1">
-          {subtitle}
-        </Typography>
+        <TextAnimation text={title} variant="h2" />
+        <TextAnimation
+          text={subtitle}
+          variant="body1"
+          delay={1.0}
+          trigger={sectionRef.current}
+        />
         <Grid container spacing={3} sx={{ p: { xs: 3, lg: 8 } }}>
           {CardList.map((item) => (
             <Grid item xs={12} md={12} lg={6} key={item.title}>

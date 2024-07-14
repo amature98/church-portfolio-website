@@ -14,10 +14,11 @@ import Worship from "../../Images/worship.jpg";
 import HolyWeek from "../../Images/holyweek.jpg";
 import Crusade from "../../Images/crusade.jpg";
 
-import ChurchOutlinedIcon from "@mui/icons-material/ChurchOutlined";
-import HouseOutlinedIcon from "@mui/icons-material/HouseOutlined";
-import GroupsOutlinedIcon from "@mui/icons-material/GroupsOutlined";
-// Creating an array of Districts
+import ChurchIcon from "@mui/icons-material/Church";
+import HouseIcon from "@mui/icons-material/House";
+import GroupsIcon from "@mui/icons-material/Groups";
+import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
+
 export const DistrictArray = [
   { district: "Wendo", elder: "Elder Paul Thairu" },
   { district: "Utugi", elder: "Elder David Muiruri" },
@@ -115,31 +116,31 @@ export const Beliefs = [
 
 export const gridItems = [
   {
-    icon: <ChurchOutlinedIcon />,
-    title: "Church Gatherings",
+    icon: <ChurchIcon />,
+    title: "Parish Congregations",
     text: "Join us as we gather at any of our churches.",
-    buttontext: "Make a visit",
+    buttontext: "Locate a church",
     path: "/#churches",
   },
   {
-    icon: <HouseOutlinedIcon />,
+    icon: <HouseIcon />,
     title: "District Fellowships",
-    text: "Locate your small group to have easier and more intimate fellowship.",
+    text: "Locate your small group to have an intimate fellowship.",
     buttontext: "Find your district",
     path: "/districts",
   },
   {
-    icon: <GroupsOutlinedIcon />,
+    icon: <GroupsIcon />,
     title: "Church Groups",
-    text: "Join our ministries to reach & serve the body of christ - the Church",
+    text: "Join a group to serve the in the body of Christ.",
     buttontext: "Find a group",
     path: "/join-a-Ministry",
   },
   {
-    icon: <GroupsOutlinedIcon />,
-    title: "Pay to God",
-    text: "You can contribute finacially through offerings, tithes, thanksgiving or generous donations.",
-    buttontext: "Contribute",
+    icon: <VolunteerActivismIcon />,
+    title: "Be a giver",
+    text: "Experience God's love through your generosity.",
+    buttontext: "Give Generously",
     path: "/join-a-Ministry",
   },
 ];
