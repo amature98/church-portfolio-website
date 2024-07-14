@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import {
   Box,
-  Button,
   Grid,
   Icon,
   Typography,
@@ -10,9 +9,7 @@ import {
 } from "@mui/material";
 
 import AddIcon from "@mui/icons-material/Add";
-import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
-
-import { Link } from "react-router-dom";
+import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -20,6 +17,7 @@ import { ScrollTrigger } from "gsap/all";
 import { gridItems } from "../Arrays/Arrays";
 
 import TextAnimation from "../TextAnimation/TextAnimation";
+import AnimatedButton from "../Buttons/Animated.button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,7 +40,7 @@ function GetInvolved() {
           opacity: 0,
           ease: "power4.out",
           duration: 3,
-          stagger: 1,
+          stagger: 0.5,
         }
       );
     };
@@ -66,7 +64,7 @@ function GetInvolved() {
             y: 200,
             opacity: 0,
             ease: "power4.out",
-            duration: 2,
+            duration: 1.5,
           });
         },
         once: true,
@@ -104,7 +102,7 @@ function GetInvolved() {
             />
             <TextAnimation
               text={
-                "There are several ways to participate at PCEA Mukinyi Parish. Whatever your comfort level, there are opportunities for you to join in community and draw nearer to Jesus."
+                "There are several ways to participate in Mukinyi. Whatever your comfort level, there are opportunities for you to join in community and draw nearer to Jesus."
               }
               variant="body1"
               delay={1.0}
@@ -141,8 +139,7 @@ function GetInvolved() {
                 <Typography variant="body1" sx={{ py: 1.0 }}>
                   {item.text}
                 </Typography>
-                <Button
-                  component={Link}
+                <AnimatedButton
                   to={item.path}
                   variant="contained"
                   endIcon={
@@ -154,13 +151,9 @@ function GetInvolved() {
                   }
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
-                  sx={{
-                    my: 2,
-                    backgroundColor: (theme) => theme.palette.secondary.main,
-                  }}
                 >
                   {item.buttontext}
-                </Button>
+                </AnimatedButton>
               </Grid>
             ))}
           </Grid>

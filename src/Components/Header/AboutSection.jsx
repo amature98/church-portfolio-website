@@ -1,16 +1,18 @@
 import React, { useEffect, useRef } from "react";
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { Link } from "react-router-dom";
-import { Box, Button, Container } from "@mui/material";
-import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+
+import { Box, Container } from "@mui/material";
+import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+
 import TextAnimation from "../TextAnimation/TextAnimation";
+import AnimatedButton from "../Buttons/Animated.button";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function AboutSection({ title, aboutText, button, ...props }) {
+function AboutSection({ title, button, aboutText, ...props }) {
   const sectionRef = useRef(null);
-  const buttonRef = useRef(null);
 
   useEffect(() => {
     ScrollTrigger.create({
@@ -19,21 +21,15 @@ function AboutSection({ title, aboutText, button, ...props }) {
       end: "bottom bottom",
       onEnter: () => {
         const tl = gsap.timeline({ delay: 1.5 });
-        tl.from(sectionRef.current.querySelectorAll(".animate-text"), {
-          y: 200,
-          opacity: 0,
-          ease: "power4.out",
-          duration: 3,
-          stagger: 0.5,
-        }).from(
-          buttonRef.current,
+        tl.from(
+          sectionRef.current.querySelectorAll(".animate-title, .animate-text"),
           {
-            y: 50,
+            y: 200,
             opacity: 0,
             ease: "power4.out",
-            duration: 1,
-          },
-          "-=2"
+            duration: 3,
+            stagger: 0.5,
+          }
         );
       },
       once: true,
@@ -42,33 +38,21 @@ function AboutSection({ title, aboutText, button, ...props }) {
 
   return (
     <Box ref={sectionRef} {...props} sx={{ textAlign: "center", mt: 4, mb: 4 }}>
-      <TextAnimation
-        text={title}
-        variant="h2"
-        delay={0.5}
-        className="animate-text"
-      />
+      <TextAnimation text={title} variant="h2" className="animate-title" />
       <Container maxWidth="md" sx={{ textAlign: "center" }}>
         <TextAnimation
           text={aboutText}
           variant="body1"
-          delay={1.0}
           className="animate-text"
         />
-        <Button
-          ref={buttonRef}
+        <AnimatedButton
+          to="/about"
           variant="contained"
           size="large"
-          component={Link}
-          to="/about"
           endIcon={<ArrowForwardIosRoundedIcon fontSize="large" />}
-          sx={{
-            m: 4,
-            background: (theme) => theme.palette.secondary.main,
-          }}
         >
           {button}
-        </Button>
+        </AnimatedButton>
       </Container>
     </Box>
   );

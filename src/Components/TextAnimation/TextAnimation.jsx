@@ -11,6 +11,7 @@ const TextAnimation = ({
   delay = 1.0,
   trigger,
   className = "",
+  ...props
 }) => {
   const textRef = useRef(null);
 
@@ -41,6 +42,7 @@ const TextAnimation = ({
       component="div"
       ref={textRef}
       className={className}
+      {...props}
     >
       {text && text.split("\n").map((line, i) => <div key={i}>{line}</div>)}
     </Typography>

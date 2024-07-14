@@ -43,6 +43,7 @@ function Mukinyi() {
         title="PCEA Mukinyi Church"
         headerText="'...My house shall be called a house of prayer for all nations...' Mark 11:17"
         bgimage={BgImage}
+        height={'80vh'}
       />
       <Template
         churchName="Mukinyi Church"

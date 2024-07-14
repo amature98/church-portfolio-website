@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { Button } from "@mui/material";
+
+import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
+import AnimatedButton from "./Animated.button";
 import JoinChurchModal from "../Modals/Joinchurch.modal";
 
 function JoinChurchButton({ churchName, ContactArray }) {
@@ -8,16 +10,12 @@ function JoinChurchButton({ churchName, ContactArray }) {
   const handleClose = () => setOpen(false);
   return (
     <>
-      <Button
+      <AnimatedButton
         onClick={handleOpen}
-        sx={{
-          color: (theme) => theme.palette.text.secondary,
-          background: (theme) => theme.palette.secondary.main,
-          paddingX: 2,
-        }}
+        endIcon={<LocationOnRoundedIcon fontSize="large" />}
       >
         join us today
-      </Button>
+      </AnimatedButton>
       <JoinChurchModal
         open={open}
         onClose={handleClose}

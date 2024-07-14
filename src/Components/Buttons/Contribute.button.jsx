@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { Button } from "@mui/material";
+
+import VolunteerActivismRoundedIcon from "@mui/icons-material/VolunteerActivismRounded";
+
+import AnimatedButton from "./Animated.button";
 import ContributeModal from "../Modals/Contribute.modal";
 
 function ContributeBtn({ churchName, contributeInfoArray }) {
@@ -8,17 +11,13 @@ function ContributeBtn({ churchName, contributeInfoArray }) {
   const handleClose = () => setOpen(false);
   return (
     <>
-      <Button
+      <AnimatedButton
         onClick={handleOpen}
-        sx={{
-          color: (theme) => theme.palette.text.secondary,
-          background: (theme) => theme.palette.secondary.main,
-          paddingX: 2,
-        }}
+        endIcon={<VolunteerActivismRoundedIcon fontSize="large" />}
       >
         {" "}
         contribute
-      </Button>
+      </AnimatedButton>
       <ContributeModal
         open={open}
         onClose={handleClose}

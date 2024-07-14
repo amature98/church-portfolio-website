@@ -1,9 +1,12 @@
 import React from "react";
-import { Box, Divider, Paper, Stack, Typography } from "@mui/material";
+
+import { Box, Divider, Paper, Stack } from "@mui/material";
+
 import JoinChurchButton from "../Buttons/JoinChurch.button";
 import ContributeButton from "../Buttons/Contribute.button";
 import Leadership from "../Components/Leadership";
 import Carousel from "../Carousel/Carousel";
+import TextAnimation from "../TextAnimation/TextAnimation";
 
 function Template({
   churchName = "",
@@ -27,12 +30,12 @@ function Template({
           textAlign: "center",
         }}
       >
-        <Typography gutterBottom variant="h3" color="text.primary">
-          Welcome to {churchName}
-        </Typography>
-        <Typography gutterBottom variant="body2">
-          {text}
-        </Typography>
+        <TextAnimation
+          text={`Welcome to ${churchName}`}
+          variant="h2"
+          gutterBottom
+        />
+        <TextAnimation text={text} variant="body1" />
         <Stack direction="row" spacing={4} sx={{ mt: 4 }}>
           <JoinChurchButton
             churchName={churchName}
@@ -59,9 +62,11 @@ function Template({
             p: 4,
           }}
         >
-          <Typography variant="h3" gutterBottom sx={{ textAlign: "center" }}>
-            Sunday Service Program
-          </Typography>
+          <TextAnimation
+            text={"Sunday Service Program"}
+            variant="h2"
+            sx={{ textAlign: "center" }}
+          />
           <Stack
             direction="row"
             divider={
@@ -77,14 +82,12 @@ function Template({
                   backgroundColor: (theme) => theme.palette.primary.light,
                 }}
                 key={index}
-                elevation={0}
               >
-                <Typography gutterBottom variant="h6" color="text.light">
-                  {item.title}
-                </Typography>
-                <Typography color="text.light" variant="body2">
-                  {item.time}
-                </Typography>
+                <TextAnimation text={item.title} gutterBottom variant="h6" />
+                <TextAnimation
+                  text={item.time}
+                  variant="body2"
+                />
               </Paper>
             ))}
           </Stack>
