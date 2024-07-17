@@ -33,10 +33,13 @@ const AnimatedButton = ({ to, children, ...props }) => {
       to={to}
       {...props}
       sx={{
-        m: 2,
+        my: 2,
         color: (theme) => theme.palette.text.secondary,
         backgroundColor: (theme) => theme.palette.secondary.main,
         ...props.sx,
+        "&:hover": {
+          backgroundColor: (theme) => theme.palette.primary.secondary,
+        },
       }}
     >
       {children}

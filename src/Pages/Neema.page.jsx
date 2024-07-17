@@ -41,6 +41,7 @@ function Neema() {
           bgimage={BgImage}
           title="Welcome to Neema Church"
           headerText="'Neema ya Bwana Yesu Kristo na upendo wa Mungu na Umoja wa Roho Mtakatifu, viwe nanyi nyote' 2 Wakorintho 13:14"
+          height={"80dvh"}
         />
         <Template
           image={Image}

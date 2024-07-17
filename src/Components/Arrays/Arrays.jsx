@@ -118,9 +118,10 @@ export const gridItems = [
   {
     icon: <ChurchIcon />,
     title: "Parish Congregations",
-    text: "Join us as we gather at any of our churches.",
+    text: "Join us as we gather in any of our congregations.",
     buttontext: "Locate a church",
-    path: "/#churches",
+    path: "/church",
+    type: "link",
   },
   {
     icon: <HouseIcon />,
@@ -128,20 +129,22 @@ export const gridItems = [
     text: "Locate your small group to have an intimate fellowship.",
     buttontext: "Find your district",
     path: "/districts",
+    type: "link",
   },
   {
     icon: <GroupsIcon />,
     title: "Church Groups",
     text: "Join a group to serve the in the body of Christ.",
     buttontext: "Find a group",
-    path: "/join-a-Ministry",
+    path: "/join-a-ministry",
+    type: "link",
   },
   {
     icon: <VolunteerActivismIcon />,
     title: "Be a giver",
     text: "Experience God's love through your generosity.",
     buttontext: "Give Generously",
-    path: "/join-a-Ministry",
+    type: "modal",
   },
 ];
 
@@ -243,6 +246,13 @@ export const contacts = [
   { tile: "pcmf", type: "E-Mail Address", contact: "pcmf@gmail.com" },
 ];
 
+export const parishAccInfo = [
+  { type: "MPesa Paybill Number", number: "247247" },
+  {
+    type: "Account Number",
+    number: "124134# then add your Name or District or District Number",
+  },
+];
 export const mukinyiAccInfo = [
   { type: "MPesa Paybill Number", number: "247247" },
   {

@@ -18,6 +18,9 @@ import { gridItems } from "../Arrays/Arrays";
 
 import TextAnimation from "../TextAnimation/TextAnimation";
 import AnimatedButton from "../Buttons/Animated.button";
+import ContributeBtn from "../Buttons/Contribute.button";
+
+import { parishAccInfo } from "../Arrays/Arrays";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -139,21 +142,28 @@ function GetInvolved() {
                 <Typography variant="body1" sx={{ py: 1.0 }}>
                   {item.text}
                 </Typography>
-                <AnimatedButton
-                  to={item.path}
-                  variant="contained"
-                  endIcon={
-                    hoveredIndex === index ? (
-                      <ArrowForwardIosRoundedIcon />
-                    ) : (
-                      <AddIcon />
-                    )
-                  }
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  {item.buttontext}
-                </AnimatedButton>
+                {item.type === "modal" ? (
+                  <ContributeBtn
+                    contributeInfoArray={parishAccInfo}
+                    churchName="PCEA Mukinyi Parish"
+                  />
+                ) : (
+                  <AnimatedButton
+                    to={item.path}
+                    variant="contained"
+                    endIcon={
+                      hoveredIndex === index ? (
+                        <ArrowForwardIosRoundedIcon />
+                      ) : (
+                        <Icon> {item.icon} </Icon>
+                      )
+                    }
+                    onMouseEnter={() => handleMouseEnter(index)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    {item.buttontext}
+                  </AnimatedButton>
+                )}
               </Grid>
             ))}
           </Grid>

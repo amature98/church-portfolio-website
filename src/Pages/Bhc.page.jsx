@@ -11,8 +11,11 @@ import Image2 from "../Images/elder2.jpg";
 import Image3 from "../Images/elder3.jpg";
 import BgImage from "../Images/church3.jpg";
 
-import { bhcServiceArray } from "../Components/Arrays/Arrays";
-import { bhcContacts } from "../Components/Arrays/Arrays";
+import {
+  bhcContacts,
+  bhcServiceArray,
+  mukinyiCarousel,
+} from "../Components/Arrays/Arrays";
 const Leaders = [
   {
     name: "Elder joseph Mugweru",
@@ -37,6 +40,7 @@ function BHC() {
         title="PCEA Blessed Hope Church"
         headerText="We're glad to have you!"
         bgimage={BgImage}
+        height={"80dvh"}
       />
       <Template
         churchName="Blessed Hope Church"
@@ -47,6 +51,8 @@ function BHC() {
         serviceArray={bhcServiceArray}
         ContactArray={bhcContacts}
         contributeInfoArray={bhcServiceArray}
+        CarouselArray={mukinyiCarousel}
+        leadersArray={Leaders}
       />
       <Leadership
         title="BHC LCC Leadership"

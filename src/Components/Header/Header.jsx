@@ -46,7 +46,7 @@ function Header({ title, headerText, height, bgimage }) {
   return (
     <StyledHeader height={height}>
       <BackgroundImage bgimage={bgimage} ref={bgRef} />
-      <Container sx={{ textAlign: "center", width: "80vw" }}>
+      <Container sx={{ textAlign: "center", width: "80dvw" }}>
         <TextAnimation
           color="text.secondary"
           text={title}

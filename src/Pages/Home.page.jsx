@@ -4,6 +4,7 @@ import Header from "../Components/Header/Header";
 import HeaderBgimg from "../Images/bg1.jpg";
 import AboutSection from "../Components/Header/AboutSection";
 import GetInvolved from "../Components/Header/GetInvolved";
+import Locations from "../Components/Header/Locations";
 import Carousel from "../Components/Carousel/Carousel";
 import { events } from "../Components/Arrays/Arrays";
 import { Box, Typography } from "@mui/material";
@@ -23,7 +24,7 @@ function Home() {
           aboutText={
             "Welcome to PCEA Mukinyi Parish, where faith meets community and hope sustains. We invite you to join us on a journey of spiritual growth and fellowship. Whether you're seeking solace, friendship, or a deeper connection with your faith, you'll find a warm embrace and open hearts here. Come as you are, and let's walk together in the light of God's love."
           }
-          button="know more"
+          button="about us"
         />
         <GetInvolved />
         <Box sx={{ mt: 2, mb: 4, textAlign: "center" }}>

@@ -14,12 +14,7 @@ import EmailIcon from "@mui/icons-material/Email";
 function Form({ title, options, buttonLabel, buttonOnClick }) {
   return (
     <>
-      <Box
-        sx={{ color: (theme) => theme.palette.primary.dark }}
-        component="form"
-        noValidate
-        autoComplete="off"
-      >
+      <Box component="form" noValidate autoComplete="off">
         <Typography variant="h4"> {title} </Typography>
         <TextField
           required
@@ -28,11 +23,11 @@ function Form({ title, options, buttonLabel, buttonOnClick }) {
           variant="standard"
           size="small"
           fullWidth
-          sx={{ my: 2 }}
+          margin="dense"
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
-                <PersonIcon />
+                <PersonIcon color="primary" />
               </InputAdornment>
             ),
           }}
@@ -44,11 +39,11 @@ function Form({ title, options, buttonLabel, buttonOnClick }) {
           variant="standard"
           fullWidth
           size="small"
-          sx={{ my: 2 }}
+          margin="dense"
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
-                <PhoneIcon />
+                <PhoneIcon color="primary" />
               </InputAdornment>
             ),
           }}
@@ -60,11 +55,11 @@ function Form({ title, options, buttonLabel, buttonOnClick }) {
           variant="standard"
           fullWidth
           size="small"
-          sx={{ my: 2 }}
+          margin="dense"
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
-                <EmailIcon />
+                <EmailIcon color="primary" />
               </InputAdornment>
             ),
           }}
@@ -77,7 +72,7 @@ function Form({ title, options, buttonLabel, buttonOnClick }) {
           fullWidth
           select
           size="small"
-          sx={{ my: 2 }}
+          margin="dense"
         >
           {options.map((option, index) => (
             <MenuItem key={index} value={option}>

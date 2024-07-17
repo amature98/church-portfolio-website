@@ -9,14 +9,14 @@ function ContributeBtn({ churchName, contributeInfoArray }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  
   return (
     <>
       <AnimatedButton
         onClick={handleOpen}
         endIcon={<VolunteerActivismRoundedIcon fontSize="large" />}
       >
-        {" "}
-        contribute
+        give generously
       </AnimatedButton>
       <ContributeModal
         open={open}
