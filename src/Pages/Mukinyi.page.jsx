@@ -38,7 +38,7 @@ const Leaders = [
 ];
 function Mukinyi() {
   return (
-    <Page title="Mukinyi Church - PCEA MUKINYI PARISH">
+    <Page title="Mukinyi Church|PCEA MUKINYI PARISH">
       <Header
         title="PCEA Mukinyi Church"
         headerText="'...My house shall be called a house of prayer for all nations...' Mark 11:17"

@@ -35,7 +35,7 @@ const Leaders = [
 ];
 function BHC() {
   return (
-    <Page title="Blessed Hope Church - PCEA MUKINYI PARISH">
+    <Page title="Blessed Hope Church|PCEA MUKINYI PARISH">
       <Header
         title="PCEA Blessed Hope Church"
         headerText="We're glad to have you!"

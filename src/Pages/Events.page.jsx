@@ -7,7 +7,7 @@ import BgImage from '../Images/events.jpg'
 function EventsPage() {
   return (
       <>
-          <Page title='Events - PCEA Mukinyi Parish'>
+          <Page title='Events|PCEA Mukinyi Parish'>
               <Header
                   height='70vh'
                   title='Events'

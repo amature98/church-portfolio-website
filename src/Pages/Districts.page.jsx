@@ -13,7 +13,7 @@ import { DistrictArray } from "../Components/Arrays/Arrays";
 function District() {
   return (
     <>
-      <Page title="Districts - PCEA Mukinyi Parish">
+      <Page title="Districts | PCEA Mukinyi Parish">
         <Header
           title="Mukinyi Parish Districts"
           headerText="Find the right community for you to grow your faith"

@@ -36,7 +36,7 @@ const Leaders = [
 function Neema() {
   return (
     <>
-      <Page title="Neema Church - PCEA MUKINYI PARISH">
+      <Page title="Neema Church|PCEA MUKINYI PARISH">
         <Header
           bgimage={BgImage}
           title="Welcome to Neema Church"

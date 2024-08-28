@@ -90,14 +90,14 @@ export const Leaders = [
 ];
 
 export const CardList = [
-  { title: "Mukinyi Church", image: church1, link: "/mukinyi-church" },
-  { title: "Neema Church", image: church2, link: "/neema-church" },
+  { title: "Mukinyi Church", image: church1, link: "/churches/mukinyi-church" },
+  { title: "Neema Church", image: church2, link: "/churches/neema-church" },
   {
     title: "Blessed Hope Church",
     image: church3,
-    link: "/blessed-hope-church",
+    link: "/churches/blessed-hope-church",
   },
-  { title: "Highway Church", image: church4, link: "/highway-church" },
+  { title: "Highway Church", image: church4, link: "/churches/highway-church" },
 ];
 export const Beliefs = [
   {
@@ -120,7 +120,7 @@ export const gridItems = [
     title: "Parish Congregations",
     text: "Join us as we gather in any of our congregations.",
     buttontext: "Locate a church",
-    path: "/church",
+    path: "/churches",
     type: "link",
   },
   {
@@ -250,7 +250,7 @@ export const parishAccInfo = [
   { type: "MPesa Paybill Number", number: "247247" },
   {
     type: "Account Number",
-    number: "124134# then add your Name or District or District Number",
+    number: "0710291",
   },
 ];
 export const mukinyiAccInfo = [
@@ -261,10 +261,10 @@ export const mukinyiAccInfo = [
   },
 ];
 export const highwayAccInfo = [
-  { type: "MPesa Paybill Number", number: "124134" },
+  { type: "MPesa Paybill Number", number: "247247" },
   {
     type: "Account Number",
-    number: "# then add your Name or District or District Number",
+    number: "0710284520469",
   },
 ];
 export const neemaAccInfo = [

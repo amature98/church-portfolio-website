@@ -4,14 +4,14 @@ export const navLinks = [
   { title: "Beliefs", path: "/about#beliefs", filter: "About" },
   { title: "Leadership", path: "/about#Leadership", filter: "About" },
   //Congregations Section
-  { title: "Mukinyi Church", path: "/mukinyi-church", filter: "Congregations" },
-  { title: "Neema Church", path: "/neema-church", filter: "Congregations" },
+  { title: "Mukinyi Church", path: "churches/mukinyi-church", filter: "Congregations" },
+  { title: "Neema Church", path: "churches/neema-church", filter: "Congregations" },
   {
     title: "Blessed Hope Church",
-    path: "/blessed-hope-church",
+    path: "churches/blessed-hope-church",
     filter: "Congregations",
   },
-  { title: "Highway Church", path: "/highway-church", filter: "Congregations" },
+  { title: "Highway Church", path: "churches/highway-church", filter: "Congregations" },
   //Get Involved Section
   {
     title: "Join A Ministry",
@@ -51,7 +51,8 @@ export const navLinks = [
 ];
 
 export const largeScreenLinks = [
-  { title: "About", path: "/About" },
+  { title: "About", path: "/about" },
+  { title: "Churches", path: "/churches" },
   { title: "Ministries" },
   { title: "Events", path: "/events" },
   { title: "Articles", path: "/articles" },

@@ -6,7 +6,7 @@ import BgImage from '../Images/ropes.jpg'
 function RopesPage() {
   return (
       <>
-          <Page title='R.O.P.E.S - PCEA Mukinyi Parish'>
+          <Page title='R.O.P.E.S|PCEA Mukinyi Parish'>
               <Header
                   height='70vh'
                   title='R.O.P.E.S'

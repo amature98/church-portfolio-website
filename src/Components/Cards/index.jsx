@@ -16,7 +16,7 @@ function index({
   description,
   image,
   missionStatement,
-  visionStatement
+  visionStatement,
 }) {
   return (
     <>
@@ -59,9 +59,11 @@ function index({
             <>
               <Grid item xs={12} md={6}>
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
-                    <CardContent sx={{ flex: "1 0 auto" }}>
-                      <Typography gutterBottom variant="h4">About {groupName}</Typography>
-                    <Typography variant="body2" sx={{pb: 3}}>
+                  <CardContent sx={{ flex: "1 0 auto" }}>
+                    <Typography gutterBottom variant="h4">
+                      About {groupName}
+                    </Typography>
+                    <Typography variant="body2" sx={{ pb: 3 }}>
                       {description}
                     </Typography>
                     <JoinGroupButton

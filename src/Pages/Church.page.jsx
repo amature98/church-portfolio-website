@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
-import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
+import { Box, Card, CardContent, Grid, Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { ScrollTrigger } from "gsap/all";
-import { CardList } from "../Arrays/Arrays";
-import TextAnimation from "../TextAnimation/TextAnimation";
+import { CardList } from "../Components/Arrays/Arrays";
+import TextAnimation from "../Components/TextAnimation/TextAnimation";
+import Page from "./Page";
 
 const Item = styled(Card)(({ theme }) => ({
   textAlign: "center",
@@ -14,6 +15,10 @@ const Item = styled(Card)(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
   color: theme.palette.common.white,
+  filter: "grayscale(100%)",
+  ":hover": {
+    filter: "grayscale(0%)",
+  },
   "&::before": {
     content: '""',
     position: "absolute",
@@ -37,47 +42,31 @@ const StyledCardContent = styled(CardContent)(() => ({
 
 gsap.registerPlugin(ScrollTrigger);
 
-function LocationsSections({ title, subtitle, ...props }) {
-  const titleRef = useRef(null);
-  const subtitleRef = useRef(null);
-  const sectionRef = useRef(null);
-  useEffect(() => {
-    ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: "top bottom",
-      end: "bottom bottom",
-      onEnter: () => {
-        const tl = gsap.timeline({ delay: 1.0 });
-        tl.from([titleRef.current, subtitleRef.current], {
-          y: 200,
-          opacity: 0,
-          ease: "power4.out",
-          duration: 3,
-          stagger: 0.2,
-        });
-      },
-      once: true,
-    });
-  }, [titleRef, subtitleRef]);
+function churchPage({ ...props }) {
   return (
-    <>
+    <Page title="PCEA Mukinyi Parish | Churches">
+      <Paper
+        component="section"
+        elevation={2}
+        sx={{ width: "90dvw", height: "75dvh", borderRadius: 4, mx: "auto", mt: 4 }}
+      >
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1iHvGgTj1WTg-P9lzgC6mJQ-IVq3MHYY&ehbc=2E312F&noprof=1"
+          title="Google Maps"
+          width="100%"
+          height="100%"
+          allowFullScreen
+        ></iframe>
+      </Paper>
       <Box
         component="section"
         id="churches"
-        ref={sectionRef}
         {...props}
         sx={{
           textAlign: "center",
           py: 4,
         }}
       >
-        <TextAnimation text={title} variant="h2" />
-        <TextAnimation
-          text={subtitle}
-          variant="body1"
-          delay={1.0}
-          trigger={sectionRef.current}
-        />
         <Grid container spacing={3} sx={{ p: { xs: 3, lg: 8 } }}>
           {CardList.map((item) => (
             <Grid item xs={12} md={12} lg={6} key={item.title}>
@@ -93,7 +82,7 @@ function LocationsSections({ title, subtitle, ...props }) {
                   }}
                 >
                   <StyledCardContent>
-                    <Typography variant="h3"> {item.title} </Typography>
+                    <TextAnimation variant="h3" text={item.title} />
                   </StyledCardContent>
                 </Item>
               </Link>
@@ -101,7 +90,7 @@ function LocationsSections({ title, subtitle, ...props }) {
           ))}
         </Grid>
       </Box>
-    </>
+    </Page>
   );
 }
-export default LocationsSections;
+export default churchPage;

@@ -4,7 +4,6 @@ import Header from "../Components/Header/Header";
 import HeaderBgimg from "../Images/bg1.jpg";
 import AboutSection from "../Components/Header/AboutSection";
 import GetInvolved from "../Components/Header/GetInvolved";
-import Locations from "../Components/Header/Locations";
 import Carousel from "../Components/Carousel/Carousel";
 import { events } from "../Components/Arrays/Arrays";
 import { Box, Typography } from "@mui/material";
@@ -12,7 +11,7 @@ import { Box, Typography } from "@mui/material";
 function Home() {
   return (
     <>
-      <Page title="Home - PCEA MUKINYI PARISH">
+      <Page title="Home | PCEA MUKINYI PARISH">
         <Header
           title="PCEA Mukinyi Parish"
           headerText="Inspiring people to follow Jesus Christ in faith; a place where love abounds and hope fills up."
