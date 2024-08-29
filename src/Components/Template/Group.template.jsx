@@ -31,7 +31,7 @@ function GroupTemplate({
       <Box
         component="section"
         sx={{
-          width: "90vw",
+          width: "90dvw",
           mt: 6,
           marginX: "auto",
           display: "flex",

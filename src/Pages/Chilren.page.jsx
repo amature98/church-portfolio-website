@@ -8,7 +8,8 @@ function ChilrenPage() {
         groupName="Children's Ministry"
         groupImage={null}
         groupMotto=""
-        aboutDescription={``}
+        aboutDescription={`This department is entrusted with the vital responsibility of imparting the Christian faith to the younger generation. It is structured around two fundamental pillars: Sunday School and Brigade, which are designed to nurture the spiritual growth of both boys and girls.
+Over the years, the department has made significant efforts to actively engage all relevant stakeholders, fostering a strong sense of unity and cooperation between its two primary pillars.`}
         aboutImage={null}
         ContactArray={[]}
         missionStatement="To provide holistic Christian instruction, training, and capacity building for all children and their mentors in order to accept Christ as their savior, equip them to understand their Christian faith and apply it in their lives."
