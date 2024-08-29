@@ -7,7 +7,7 @@ function ChilrenPage() {
       <GroupTemplate
         groupName="Children's Ministry"
         groupImage={null}
-        groupMotto=""
+        groupMotto="LET THE LITTLE CHILDREN COME TO ME (LUKE 18:16)"
         aboutDescription={`This department is entrusted with the vital responsibility of imparting the Christian faith to the younger generation. It is structured around two fundamental pillars: Sunday School and Brigade, which are designed to nurture the spiritual growth of both boys and girls.
 Over the years, the department has made significant efforts to actively engage all relevant stakeholders, fostering a strong sense of unity and cooperation between its two primary pillars.`}
         aboutImage={null}

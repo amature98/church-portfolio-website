@@ -7,7 +7,7 @@ function ChristianEducationPage() {
       <GroupTemplate
         groupName="Christian Education"
         groupImage={null}
-        groupMotto={`My People are destroyed from lack of knowledge’ (Hosea 4:6)`}
+        groupMotto={`MY PEOPLE ARE DESTROYED FROM LACK OF KNOWLEDGE’ (HOSEA 4:6)`}
         aboutDescription={`Christian Education is multifaceted, encompassing the roles of advising, facilitating, sensitizing, intervening, educating, and representing. The core objective of Christian Education within the Church is to teach, disciple, and equip learners to grow in Christlikeness. 
           At its essence, Christian Education is a Bible-based, Holy Spirit-empowered (Christ-centered) teaching and learning process. It aims to guide individuals through all stages of life, using contemporary teaching methods to help them discover and fulfill God's purpose through Christ in every aspect of living.
           We also functions as the Church's quality assurance arm, ensuring the application of Biblical principles across its institutions and departments. It collaborates with various groups and committees to uphold these standards.`}
