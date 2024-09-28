@@ -19,23 +19,7 @@ import {
   mukinyiContacts,
   mukinyiServiceArray,
 } from "../Components/Arrays/Arrays";
-const Leaders = [
-  {
-    name: "Elder Paul Thairu",
-    title: "Chairperson",
-    image: Image1,
-  },
-  {
-    name: "Elder Eustace Kiarie",
-    title: "Registrar",
-    image: Image2,
-  },
-  {
-    name: "Mrs. ",
-    title: "Treasurer",
-    image: Image3,
-  },
-];
+
 function Mukinyi() {
   return (
     <Page title="Mukinyi Church|PCEA MUKINYI PARISH">
@@ -52,7 +36,6 @@ function Mukinyi() {
         serviceArray={mukinyiServiceArray}
         ContactArray={mukinyiContacts}
         contributeInfoArray={mukinyiAccInfo}
-        leadersArray={Leaders}
         title="Mukinyi LCC Leadership"
         CarouselArray={mukinyiCarousel}
       />

@@ -38,7 +38,7 @@ function Text() {
           <TextAnimation
             gutterBottom
             variant="body2"
-            text={}
+            text={""}
           />
         </Card>
         <Card

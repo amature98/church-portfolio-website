@@ -22,10 +22,10 @@ function About() {
         />
         <Container maxWidth="none" sx={{ width: "90vw", mx: "auto", my: 8 }}>
           <Text />
-          <Leadership
+          {/* <Leadership
             leadersArray={Leaders}
             title="Kirk Session - the Mukinyi Leadership"
-          />
+          /> */}
         </Container>
       </Page>
     </>

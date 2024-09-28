@@ -3,11 +3,6 @@ import Page from "./Page";
 import Header from "../Components/Header/Header";
 import BgImage from "../Images/church2.jpg";
 import Template from "../Components/Template/Church.template";
-
-import Image1 from "../Images/elder1.jpg";
-import Image2 from "../Images/elder2.jpg";
-import Image3 from "../Images/elder3.jpg";
-
 // Import Arrays
 import {
   neemaAccInfo,
@@ -15,23 +10,6 @@ import {
   neemaServiceArray,
   mukinyiCarousel,
 } from "../Components/Arrays/Arrays";
-const Leaders = [
-  {
-    name: "Elder Paul Thairu",
-    title: "Chairperson",
-    image: Image1,
-  },
-  {
-    name: "Elder Eustace Kiarie",
-    title: "Registrar",
-    image: Image2,
-  },
-  {
-    name: "Mrs. ",
-    title: "Treasurer",
-    image: Image3,
-  },
-];
 
 function Neema() {
   return (
@@ -52,7 +30,6 @@ function Neema() {
           ContactArray={neemaContacts}
           contributeInfoArray={neemaAccInfo}
           CarouselArray={mukinyiCarousel}
-          leadersArray={Leaders}
         />
       </Page>
     </>

@@ -16,23 +16,6 @@ import {
   highwayServiceArray,
   mukinyiCarousel,
 } from "../Components/Arrays/Arrays";
-const Leaders = [
-  {
-    name: "Elder Kanyi",
-    title: "Chairperson",
-    image: Image1,
-  },
-  {
-    name: "Elder Ruth ",
-    title: "Registrar",
-    image: Image3,
-  },
-  {
-    name: "Mr. Mubea",
-    title: "Treasurer",
-    image: Image2,
-  },
-];
 function Highway() {
   return (
     <Page title="Highway Church - PCEA MUKINYI PARISH">
@@ -51,14 +34,8 @@ function Highway() {
         serviceArray={highwayServiceArray}
         ContactArray={highwayContacts}
         contributeInfoArray={highwayAccInfo}
-        leadersArray={Leaders}
         CarouselArray={mukinyiCarousel}
-      />
-      <Leadership
-        title="Highway LCC Leadership"
-        leadersArray={Leaders}
-        textAlign="center"
-      />
+      /> 
     </Page>
   );
 }

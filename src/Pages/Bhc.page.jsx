@@ -16,23 +16,6 @@ import {
   bhcServiceArray,
   mukinyiCarousel,
 } from "../Components/Arrays/Arrays";
-const Leaders = [
-  {
-    name: "Elder joseph Mugweru",
-    title: "Chairperson",
-    image: Image1,
-  },
-  {
-    name: "Elder Zachariah Kori",
-    title: "Registrar",
-    image: Image2,
-  },
-  {
-    name: "Mrs. Mary Kamau",
-    title: "Treasurer",
-    image: Image3,
-  },
-];
 function BHC() {
   return (
     <Page title="Blessed Hope Church|PCEA MUKINYI PARISH">
@@ -52,12 +35,6 @@ function BHC() {
         ContactArray={bhcContacts}
         contributeInfoArray={bhcServiceArray}
         CarouselArray={mukinyiCarousel}
-        leadersArray={Leaders}
-      />
-      <Leadership
-        title="BHC LCC Leadership"
-        leadersArray={Leaders}
-        textAlign="center"
       />
     </Page>
   );

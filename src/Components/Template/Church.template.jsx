@@ -93,11 +93,11 @@ function Template({
           </Stack>
         </Box>
       </Box>
-      <Leadership
+      {/* <Leadership
         title={title}
         leadersArray={leadersArray}
         textAlign="center"
-      />
+      /> */}
       <Carousel CarouselArray={CarouselArray} />
     </>
   );
