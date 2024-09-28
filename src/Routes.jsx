@@ -9,22 +9,18 @@ const Events = lazy(() => import("./Pages/Events.page.jsx"));
 const Event = lazy(() => import("./Pages/Event.page.jsx"));
 const Districts = lazy(() => import("./Pages/Districts.page.jsx"));
 const Church = lazy(() => import("./Pages/Church.page.jsx"));
-
 // Congregations
 const Mukinyi = lazy(() => import("./Pages/Mukinyi.page.jsx"));
 const Neema = lazy(() => import("./Pages/Neema.page.jsx"));
 const BHC = lazy(() => import("./Pages/Bhc.page.jsx"));
 const Highway = lazy(() => import("./Pages/Highway.page.jsx"));
-
 // Projects
 const Sacco = lazy(() => import("./Pages/Sacco.page.jsx"));
 const School = lazy(() => import("./Pages/School.page.jsx"));
 const RopesPage = lazy(() => import("./Pages/Ropes.page.jsx"));
-
 // Articles
 const ArticlesPage = lazy(() => import("./Pages/Articles.page.jsx"));
 const ArticlePage = lazy(() => import("./Pages/Article.page.jsx"));
-
 // Ministries
 const PcmfPage = lazy(() => import("./Pages/PCMF.page.jsx"));
 const WomensPage = lazy(() => import("./Pages/Womens.page.jsx"));
@@ -36,10 +32,8 @@ const ChristianEducationPage = lazy(
   () => import("./Pages/ChristianEducation.page.jsx")
 );
 const JprcPage = lazy(() => import("./Pages/Jprc.page.jsx"));
-
 // Error
 const ErrorPage = lazy(() => import("./Pages/Error.page.jsx"));
-
 function Routes() {
   return useRoutes([
     // Main routes
@@ -91,7 +85,6 @@ function Routes() {
         </Suspense>
       ),
     },
-
     // Routes to ministries
     {
       path: "/pcmf",

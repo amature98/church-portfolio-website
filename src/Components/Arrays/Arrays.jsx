@@ -12,27 +12,7 @@ import Mukinyi1 from "../../Images/mukinyi1.jpg";
 import BibleStudy from "../../Images/bible.jpg";
 import Worship from "../../Images/worship.jpg";
 import HolyWeek from "../../Images/holyweek.jpg";
-import Crusade from "../../Images/crusade.jpg";
-
-import ChurchIcon from "@mui/icons-material/Church";
-import HouseIcon from "@mui/icons-material/House";
-import GroupsIcon from "@mui/icons-material/Groups";
-import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
-
-export const DistrictArray = [
-  { district: "Wendo", elder: "Elder Paul Thairu" },
-  { district: "Utugi", elder: "Elder David Muiruri" },
-  { district: "Ebenezer", elder: "Elder Maina" },
-  { district: "Witikio", elder: "Elder Eustace Kiarie" },
-  { district: "Hekima", elder: "Elder " },
-  { district: "Mwangaza", elder: "Elder " },
-  { district: "Baraka", elder: "Elder Zackariah Kori" },
-  { district: "Shammah", elder: "Elder Samuel Kigotho" },
-  { district: "Ushindi", elder: "Elder John Kihumba" },
-  { district: "Kirigiriro", elder: "Elder Joseph Mugweru" },
-  { district: "Kirathima", elder: "Elder Ann Njoroge" },
-  { district: "Highway", elder: "Elder " },
-];
+import Crusade from "../../Images/crusade.jpg"
 // An array of the leaders annd their props
 export const Leaders = [
   {
@@ -98,54 +78,6 @@ export const CardList = [
     link: "/churches/blessed-hope-church",
   },
   { title: "Highway Church", image: church4, link: "/churches/highway-church" },
-];
-export const Beliefs = [
-  {
-    title: "Mission",
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    title: "Vision",
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    title: "Theme",
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-  },
-];
-
-export const gridItems = [
-  {
-    icon: <ChurchIcon />,
-    title: "Parish Congregations",
-    text: "Join us as we gather in any of our congregations.",
-    buttontext: "Locate a church",
-    path: "/churches",
-    type: "link",
-  },
-  {
-    icon: <HouseIcon />,
-    title: "District Fellowships",
-    text: "Locate your small group to have an intimate fellowship.",
-    buttontext: "Find your district",
-    path: "/districts",
-    type: "link",
-  },
-  {
-    icon: <GroupsIcon />,
-    title: "Church Groups",
-    text: "Join a group to serve the in the body of Christ.",
-    buttontext: "Find a group",
-    path: "/join-a-ministry",
-    type: "link",
-  },
-  {
-    icon: <VolunteerActivismIcon />,
-    title: "Be a giver",
-    text: "Experience God's love through your generosity.",
-    buttontext: "Give Generously",
-    type: "modal",
-  },
 ];
 
 export const mukinyiServiceArray = [
@@ -239,18 +171,18 @@ export const bhcContacts = [
 ];
 export const contacts = [
   {
-    tile: "youth",
+    title: "youth",
     type: "E-Mail Address",
     contact: "mukinyiyouth254@gmail.com",
   },
-  { tile: "pcmf", type: "E-Mail Address", contact: "pcmf@gmail.com" },
+  { title: "pcmf", type: "E-Mail Address", contact: "pcmf@gmail.com" },
 ];
 
 export const parishAccInfo = [
   { type: "MPesa Paybill Number", number: "247247" },
   {
     type: "Account Number",
-    number: "0710291",
+    number: "0710291941568",
   },
 ];
 export const mukinyiAccInfo = [
@@ -268,17 +200,17 @@ export const highwayAccInfo = [
   },
 ];
 export const neemaAccInfo = [
-  { type: "MPesa Paybill Number", number: "124134" },
+  { type: "MPesa Paybill Number", number: "247247" },
   {
     type: "Account Number",
-    number: "# then add your Name or District or District Number",
+    number: "0710198489135",
   },
 ];
 export const bhcAccInfo = [
-  { type: "MPesa Paybill Number", number: "124134" },
+  { type: "MPesa Paybill Number", number: "247247" },
   {
     type: "Account Number",
-    number: "# then add your Name or District or District Number",
+    number: "0710267874498",
   },
 ];
 export const mukinyiCarousel = [

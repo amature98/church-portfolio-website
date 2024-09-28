@@ -48,7 +48,7 @@ function churchPage({ ...props }) {
       <Paper
         component="section"
         elevation={2}
-        sx={{ width: "90dvw", height: "75dvh", borderRadius: 4, mx: "auto", mt: 4 }}
+        sx={{ width: "90dvw", height: "75dvh", borderRadius: 4, mx: "auto", mt: 8 }}
       >
         <iframe
           src="https://www.google.com/maps/d/embed?mid=1iHvGgTj1WTg-P9lzgC6mJQ-IVq3MHYY&ehbc=2E312F&noprof=1"

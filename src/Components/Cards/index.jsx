@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import JoinGroupButton from "../Buttons/JoinGroup.button";
+import TextAnimation from "../TextAnimation/TextAnimation";
 
 function index({
   groupName,
@@ -36,20 +37,12 @@ function index({
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
                   <CardContent sx={{ flex: "1 0 auto" }}>
                     <Box>
-                      <Typography gutterBottom variant="h4">
-                        Mission
-                      </Typography>
-                      <Typography gutterBottom variant="body2">
-                        {missionStatement}
-                      </Typography>
+                      <TextAnimation gutterBottom variant="h4" text="Mission" />
+                      <TextAnimation gutterBottom variant="body2" text={missionStatement}/>
                     </Box>
                     <Box>
-                      <Typography gutterBottom variant="h4">
-                        Vision
-                      </Typography>
-                      <Typography gutterBottom variant="body2">
-                        {visionStatement}
-                      </Typography>
+                      <TextAnimation gutterBottom variant="h4" text='Vision' />
+                      <TextAnimation gutterBottom variant="body2" text={visionStatement} />
                     </Box>
                   </CardContent>
                 </Box>
@@ -60,12 +53,8 @@ function index({
               <Grid item xs={12} md={6}>
                 <Box sx={{ display: "flex", flexDirection: "column" }}>
                   <CardContent sx={{ flex: "1 0 auto" }}>
-                    <Typography gutterBottom variant="h4">
-                      About {groupName}
-                    </Typography>
-                    <Typography variant="body2" sx={{ pb: 3 }}>
-                      {description}
-                    </Typography>
+                      <TextAnimation gutterBottom variant="h4" text={`About ${groupName}`} />
+                    <TextAnimation variant="body2" sx={{ pb: 3 }} text={description} />
                     <JoinGroupButton
                       groupName={groupName}
                       ContactArray={ContactArray}

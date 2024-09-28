@@ -13,7 +13,7 @@ import { Leaders } from "../Components/Arrays/Arrays";
 function About() {
   return (
     <>
-      <Page title="About - PCEA MUKINYI PARISH">
+      <Page title="About | PCEA MUKINYI PARISH">
         <Header
           height="70vh"
           title="Who are we?"

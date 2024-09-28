@@ -8,13 +8,12 @@ import {
   useTheme,
 } from "@mui/material";
 
-import AddIcon from "@mui/icons-material/Add";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
-import { gridItems } from "../Arrays/Arrays";
+import { gridItems } from "../Arrays/Items.array";
 
 import TextAnimation from "../TextAnimation/TextAnimation";
 import AnimatedButton from "../Buttons/Animated.button";
