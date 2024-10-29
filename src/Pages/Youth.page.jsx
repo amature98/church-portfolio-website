@@ -3,7 +3,8 @@ import GroupTemplate from "../Components/Template/Group.template";
 import GroupImage from "../Images/youth.jpg";
 import AboutImage from "../Images/yf-about.jpg";
 import MsImage from "../Images/yf-img.jpg";
-import { contacts, youthCarousel } from "../Components/Arrays/Arrays";
+import { contacts } from "../Components/Arrays/Arrays";
+import { youthCarousel } from "../Components/Arrays/Images.array";
 
 function YouthPage() {
   return (
@@ -18,9 +19,7 @@ function YouthPage() {
         aboutImage={AboutImage}
         missionImage={MsImage}
         CarouselArray={youthCarousel}
-        ContactArray={contacts.filter(
-          (contact) => contact.tile === "youth"
-        )}
+        ContactArray={contacts.filter((contact) => contact.tile === "youth")}
       />
     </>
   );

@@ -14,7 +14,7 @@ function Page({ children, title = "" }) {
         </Helmet>
         <NavBar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </Box>
     </>
   );

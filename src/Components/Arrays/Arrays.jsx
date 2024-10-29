@@ -227,23 +227,3 @@ export const mukinyiCarousel = [
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
-import sport from "../../Images/sports.jpg";
-import worship from "../../Images/we.jpg";
-import youthWeek from "../../Images/youth-week.jpg";
-export const youthCarousel = [
-  {
-    id: 1,
-    image: sport,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    id: 2,
-    image: worship,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    id: 3,
-    image: youthWeek,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-];

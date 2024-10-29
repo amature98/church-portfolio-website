@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { Navigate, useRoutes } from "react-router-dom";
-import Loader from "./Components/Loader/Loader.jsx"; // Assuming you have a Loader component for fallback
+import Loader from "./Components/Loader/Loader.jsx"; 
 
 // Main Routes
 const Home = lazy(() => import("./Pages/Home.page.jsx"));

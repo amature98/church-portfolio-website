@@ -1,5 +1,6 @@
 import React from "react";
 import GroupTemplate from "../Components/Template/Group.template";
+import { evangelismCarousel } from "../Components/Arrays/Images.array";
 
 function EvangelismPage() {
   return (
@@ -14,7 +15,7 @@ function EvangelismPage() {
         missionImage={null}
         missionStatement=""
         visionStatement=""
-        CarouselArray={[]}
+        CarouselArray={evangelismCarousel}
       />
     </>
   );

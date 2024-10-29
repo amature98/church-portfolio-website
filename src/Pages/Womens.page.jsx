@@ -1,6 +1,7 @@
 import React from "react";
 import GroupTemplate from "../Components/Template/Group.template";
 import { contacts } from "../Components/Arrays/Arrays";
+import { guildCarousel } from "../Components/Arrays/Images.array";
 
 function WomensPage() {
   return (
@@ -14,7 +15,7 @@ function WomensPage() {
         visionStatement="To be an inclusive Christian Women’s organization that empowers women to transform society"
         aboutImage={null}
         missionImage={null}
-        CarouselArray={[]}
+        CarouselArray={guildCarousel}
         ContactArray={contacts.filter((contact) => contact.title === "guild")}
       />
     </>
