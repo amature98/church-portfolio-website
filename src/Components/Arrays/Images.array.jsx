@@ -78,4 +78,24 @@ export const childrenCarousel = [
     image: children3,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
+];import ropes1 from "../../Images/children1.jpg";
+import ropes2 from "../../Images/ropes2.jpg";
+import ropes3 from "../../Images/ropes3.jpg";
+export const ropesCarousel = [
+  {
+    id: 1,
+    image: ropes1,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: 2,
+    image: ropes2,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: 3,
+    image: ropes3,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
 ];
+
