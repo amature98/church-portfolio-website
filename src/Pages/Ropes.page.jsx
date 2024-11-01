@@ -17,7 +17,7 @@ function RopesPage() {
         visionStatement='"Empowering young minds to navigate the transition to adulthood with purpose, confidence, and Christian values."'
         aboutImage={AbtImg}
         missionImage={MsImg}
-        CarouselArray={ropesCarousel}
+        CarouselArray={[ropesCarousel]}
       />
     </>
   );

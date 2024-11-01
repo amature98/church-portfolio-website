@@ -1,6 +1,6 @@
-import sport from "../../Images/sports.jpg";
-import worship from "../../Images/we.jpg";
-import youthWeek from "../../Images/youth-week.jpg";
+import sport from "../../Images/sports.JPG";
+import worship from "../../Images/we.JPG";
+import youthWeek from "../../Images/youth-week.JPG";
 export const youthCarousel = [
   {
     id: 1,
@@ -19,9 +19,9 @@ export const youthCarousel = [
   },
 ];
 
-import guild from "../../Images/guild1.jpg";
-import guild2 from "../../Images/guild2.jpg";
-import guild3 from "../../Images/guild3.jpg";
+import guild from "../../Images/guild1.JPG";
+import guild2 from "../../Images/guild2.JPG";
+import guild3 from "../../Images/guild3.JPG";
 export const guildCarousel = [
   {
     id: 1,
@@ -39,9 +39,9 @@ export const guildCarousel = [
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
-import evangelism1 from "../../Images/evangelism1.jpg";
-import evangelism2 from "../../Images/evangelism2.jpg";
-import evangelism3 from "../../Images/evangelism3.jpg";
+import evangelism1 from "../../Images/evangelism1.JPG";
+import evangelism2 from "../../Images/evangelism2.JPG";
+import evangelism3 from "../../Images/evangelism3.JPG";
 export const evangelismCarousel = [
   {
     id: 1,
@@ -59,9 +59,9 @@ export const evangelismCarousel = [
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
-import children1 from "../../Images/children1.jpg";
-import children2 from "../../Images/children2.jpg";
-import children3 from "../../Images/children3.jpg";
+import children1 from "../../Images/children1.JPG";
+import children2 from "../../Images/children2.JPG";
+import children3 from "../../Images/children3.JPG";
 export const childrenCarousel = [
   {
     id: 1,
@@ -78,9 +78,10 @@ export const childrenCarousel = [
     image: children3,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
-];import ropes1 from "../../Images/children1.jpg";
-import ropes2 from "../../Images/ropes2.jpg";
-import ropes3 from "../../Images/ropes3.jpg";
+];
+import ropes1 from "../../Images/ropes1.JPG";
+import ropes2 from "../../Images/ropes2.JPG";
+import ropes3 from "../../Images/ropes4.JPG";
 export const ropesCarousel = [
   {
     id: 1,
@@ -98,4 +99,3 @@ export const ropesCarousel = [
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
-
