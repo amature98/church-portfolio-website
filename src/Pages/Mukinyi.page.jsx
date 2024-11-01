@@ -2,17 +2,7 @@ import React from "react";
 import Template from "../Components/Template/Church.template";
 import Page from "./Page";
 import Header from "../Components/Header/Header";
-
-import Leadership from "../Components/Components/Leadership";
-import Carousel from "../Components/Carousel/Carousel";
-
-// Import images
-import Image1 from "../Images/elder1.jpg";
-import Image2 from "../Images/elder2.jpg";
-import Image3 from "../Images/elder3.jpg";
 import BgImage from "../Images/mukinyi.jpg";
-
-// Import Arrays
 import {
   mukinyiAccInfo,
   mukinyiCarousel,
@@ -21,23 +11,26 @@ import {
 } from "../Components/Arrays/Arrays";
 
 function Mukinyi() {
+  const pageTitle = "Mukinyi Church | PCEA MUKINYI PARISH";
+  const headerTitle = "PCEA Mukinyi Church";
+  const headerText = "'...My house shall be called a house of prayer for all nations...' Mark 11:17";
+  const churchDescription = "At P.C.E.A Mukinyi Church, we believe that the Great Commission is our mandate as the church of Jesus Christ. We create a platform that allows members to express the diverse gifts apportioned by God. We encourage each other to grow toward Jesus Christ and make it our mission to reach out to the lost and lonely.";
+
   return (
-    <Page title="Mukinyi Church|PCEA MUKINYI PARISH">
+    <Page title={pageTitle}>
       <Header
-        title="PCEA Mukinyi Church"
-        headerText="'...My house shall be called a house of prayer for all nations...' Mark 11:17"
+        title={headerTitle}
+        headerText={headerText}
         bgimage={BgImage}
-        height={'80dvh'}
+        height="80dvh"
       />
       <Template
         churchName="Mukinyi Church"
-        text='"At P.C.E.A Mukinyi Church, we believe that the great commission is our mandate as the church of Jesus Christ and we ensure that we create a platform that allows members to express the different graces that have been apportioned to them by God. We encourage each other into growing towards Jesus Christ and make it our business to go out and show Him to the lost and lonely."'
-        image={Image}
+        text={churchDescription}
         serviceArray={mukinyiServiceArray}
         ContactArray={mukinyiContacts}
         contributeInfoArray={mukinyiAccInfo}
-        title="Mukinyi LCC Leadership"
-        CarouselArray={mukinyiCarousel}
+        CarouselArray={[]}
       />
     </Page>
   );

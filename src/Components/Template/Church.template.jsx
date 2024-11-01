@@ -1,25 +1,24 @@
 import React from "react";
-
-import { Box, Divider, Paper, Stack } from "@mui/material";
-
+import PropTypes from "prop-types";
+import { Box, Divider, Paper, Stack, useTheme } from "@mui/material";
 import JoinChurchButton from "../Buttons/JoinChurch.button";
 import ContributeButton from "../Buttons/Contribute.button";
-import Leadership from "../Components/Leadership";
 import Carousel from "../Carousel/Carousel";
 import TextAnimation from "../TextAnimation/TextAnimation";
 
 function Template({
   churchName = "",
   text = "",
-  serviceArray,
-  ContactArray,
-  contributeInfoArray,
-  CarouselArray,
-  leadersArray,
-  title = "",
+  serviceArray = [],
+  ContactArray = [],
+  contributeInfoArray = [],
+  CarouselArray = [],
 }) {
+  const theme = useTheme();
+  const hasCarouselItems = CarouselArray && CarouselArray.length > 0;
+
   return (
-    <>
+    <Box component="section">
       <Box
         sx={{
           width: "80vw",
@@ -36,6 +35,7 @@ function Template({
           gutterBottom
         />
         <TextAnimation text={text} variant="body1" />
+
         <Stack direction="row" spacing={4} sx={{ mt: 4 }}>
           <JoinChurchButton
             churchName={churchName}
@@ -47,10 +47,11 @@ function Template({
           />
         </Stack>
       </Box>
+
       <Box
         sx={{
           p: 4,
-          backgroundColor: (theme) => theme.palette.primary.light,
+          backgroundColor: theme.palette.primary.light,
         }}
       >
         <Box
@@ -63,44 +64,54 @@ function Template({
           }}
         >
           <TextAnimation
-            text={"Sunday Service Program"}
+            text="Sunday Service Program"
             variant="h2"
             sx={{ textAlign: "center" }}
           />
+
           <Stack
             direction="row"
-            divider={
-              <Divider orientation="vertical" flexItem variant="middle" />
-            }
+            divider={<Divider orientation="vertical" flexItem />}
+            sx={{ mt: 2 }}
           >
-            {serviceArray.map((item, index) => (
+            {serviceArray.map((service, index) => (
               <Paper
+                key={index}
                 sx={{
                   textAlign: "center",
                   px: 2,
                   py: 2,
-                  backgroundColor: (theme) => theme.palette.primary.light,
+                  backgroundColor: theme.palette.primary.light,
+                  flex: 1,
+                  minWidth: "150px",
                 }}
-                key={index}
+                elevation={3}
               >
-                <TextAnimation text={item.title} gutterBottom variant="h6" />
-                <TextAnimation
-                  text={item.time}
-                  variant="body2"
-                />
+                <TextAnimation text={service.title} variant="h6" gutterBottom />
+                <TextAnimation text={service.time} variant="body2" />
               </Paper>
             ))}
           </Stack>
         </Box>
       </Box>
-      {/* <Leadership
-        title={title}
-        leadersArray={leadersArray}
-        textAlign="center"
-      /> */}
-      <Carousel CarouselArray={CarouselArray} />
-    </>
+
+      {hasCarouselItems && <Carousel CarouselArray={CarouselArray} />}
+    </Box>
   );
 }
+
+Template.propTypes = {
+  churchName: PropTypes.string,
+  text: PropTypes.string,
+  serviceArray: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      time: PropTypes.string.isRequired,
+    })
+  ),
+  ContactArray: PropTypes.array.isRequired,
+  contributeInfoArray: PropTypes.array.isRequired,
+  CarouselArray: PropTypes.array.isRequired,
+};
 
 export default Template;
