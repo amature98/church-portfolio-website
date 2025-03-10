@@ -13,11 +13,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import { largeScreenLinks, navLinks } from "./NavLinks";
-import NavLinkButton from "../Buttons/NavLinkButton";
+import NavLinkButton from "../../ui/Buttons/NavLinkButton";
 import NavDrawer from "./NavDrawer";
-import LogoNavLink from "../Buttons/LogoNavLink";
+import LogoNavLink from "../../ui/Buttons/LogoNavLink"
 
-function LargeScreenNavbar() {
+export default function DesktopNavbar() {
   const [open, setOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const pathname = usePathname();
@@ -27,7 +27,7 @@ function LargeScreenNavbar() {
   const handleClose = useCallback(() => setAnchorEl(null), []);
 
   const isActive = useCallback(
-    (path) => path === pathname || pathname.startsWith(path), // ✅ Replaces matchPath()
+    (path) => path === pathname || pathname.startsWith(path),
     [pathname]
   );
 
@@ -60,13 +60,13 @@ function LargeScreenNavbar() {
                     backgroundColor: (theme) => theme.palette.primary.main,
                   },
                 }}
-                MenuListProps={{ "aria-labelledby": "basic-button" }}
+                // MenuListProps={{ "aria-labelledby": "basic-button" }}
               >
                 {navLinks
                   .filter((item) => item.filter === "Ministries")
                   .map((ministry) => (
                     <MenuItem key={ministry.title} onClick={handleClose}>
-                      <Link href={ministry.href} passHref>
+                      <Link href={ministry.path} passHref>
                         <NavLinkButton item={ministry} active={isActive} />
                       </Link>
                     </MenuItem>
@@ -74,7 +74,7 @@ function LargeScreenNavbar() {
               </Menu>
             </Box>
           ) : (
-            <Link key={link.title} href={link.href} passHref>
+            <Link key={link.title} href={link.path} passHref>
               <NavLinkButton item={link} active={isActive} />
             </Link>
           )
@@ -87,5 +87,3 @@ function LargeScreenNavbar() {
     </Box>
   );
 }
-
-export default LargeScreenNavbar;

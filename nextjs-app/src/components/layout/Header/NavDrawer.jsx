@@ -13,7 +13,7 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import LogoNavLink from "../Buttons/LogoNavLink"; 
+import LogoNavLink from "../../ui/Buttons/LogoNavLink"; 
 import { navTitles, navLinks } from "./NavLinks"; 
 
 export default function NavDrawer({

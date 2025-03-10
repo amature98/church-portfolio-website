@@ -42,7 +42,7 @@ export const navLinks = [
   { title: "Health Board", path: "/health-board", filter: "Ministries" },
   { title: "JPRC", path: "/jprc", filter: "Ministries" },
 
-  // Programss section
+  // Programs section
   { title: "R.O.P.E.S", path: "/ropes", filter: "Programs" },
   { title: "Mukinyi Presbyterian Academy", path: "/mpa", filter: "Programs" },
   { title: "Mukinyi SACCO", path: "/mukinyi-sacco", filter: "Programs" },
@@ -53,7 +53,7 @@ export const navLinks = [
 export const largeScreenLinks = [
   { title: "About", path: "/about" },
   { title: "Churches", path: "/churches" },
-  { title: "Ministries" },
+  { title: "Ministries", path: "" },
   { title: "Events", path: "/events" },
   { title: "Articles", path: "/articles" },
 ];

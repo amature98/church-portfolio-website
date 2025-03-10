@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import { useServerInsertedHTML } from "next/navigation";
-import theme from '@styles/theme'
+import theme from '../styles/theme'
 
 export default function ThemeRegistry({ children }) {
   const [key, setKey] = useState(0);

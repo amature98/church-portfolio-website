@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { IconButton, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import NavDrawer from "./NavDrawer";
-import LogoNavLink from "../Buttons/LogoNavLink";
+import LogoNavLink from "../../ui/Buttons/LogoNavLink";
 
-export default function SmallScreenNavbar() {
+export default function MobileNavbar() {
   const [open, setOpen] = useState(false);
   const [container, setContainer] = useState(null);
 

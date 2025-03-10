@@ -3,14 +3,14 @@
 import { Nunito, Open_Sans } from "next/font/google";
 import Head from 'next/head'
 
-import "../styles/global.css";
+import "./globals.css"
 import ThemeRegistry from "./ThemeRegistry";
 
 import Header from "@/components/layout/Header/index"
 
 const nunito = Nunito({
   subsets: ['latin'],
-  weight: ['200', '300', '400','500', '600', '700'], // Specify weights
+  weight: ['200', '300', '400','500', '600', '700'],
   variable: '--font-nunito', // Define a CSS variable
 });
 
@@ -19,11 +19,6 @@ const openSans = Open_Sans({
   weight: ['300', '400', '500'],
   variable: '--font-open-sans',
 });
-
-export const metadata = {
-  title: "PCEA MUKINYI PARISH",
-  description: "Welcome to Mukinyi Parish, a vibrant Christian community dedicated to worship, fellowship, and service. Explore our diverse ministries, engaging events, and impactful outreach programs. Join us on our journey of faith and service to make a difference in our local community and beyond. Plan your visit today!",
-};
 
 export default function RootLayout({ children }) {
   return (
